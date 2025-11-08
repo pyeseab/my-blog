@@ -1,5 +1,4 @@
 <!doctype html>
-
 <html lang="en">
 <head>
   <meta charset="utf-8">
@@ -13,25 +12,207 @@
       background: #ffffff;
       color: #0f172a;
       line-height: 1.6;
+      overflow-x: hidden;
     }
-    .container {
+
+    /* Header */
+    header {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .site-title {
+      font-weight: 900;
+      font-size: clamp(28px, 5vw, 36px); /* slightly smaller than homepage */
+      margin: 0;
+      text-align: center;
+    }
+
+    /* Hamburger icon */
+    .menu-icon {
+      position: absolute;
+      left: 20px;
+      top: 25px;
+      cursor: pointer;
+      z-index: 1001;
+      width: 28px;
+      height: 22px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .menu-icon div {
+      height: 4px;
+      background-color: #0f172a;
+      border-radius: 2px;
+      transition: all 0.3s ease;
+    }
+    .menu-icon.open div:nth-child(1) {
+      transform: rotate(45deg) translateY(9px);
+    }
+    .menu-icon.open div:nth-child(2) {
+      opacity: 0;
+    }
+    .menu-icon.open div:nth-child(3) {
+      transform: rotate(-45deg) translateY(-9px);
+    }
+
+    /* Left slide-in navigation */
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 260px;
+      height: 100%;
+      background-color: #fff;
+      border-right: 1px solid #ddd;
+      padding-top: 100px;
+      transform: translateX(-100%);
+      transition: transform 0.4s ease;
+      z-index: 1000;
+      text-align: left;
+    }
+    nav.open {
+      transform: translateX(0);
+    }
+
+    /* Menu items */
+    .menu-item {
+      margin: 20px 0;
+      padding-left: 30px;
+    }
+    .parent-item {
+      font-size: 20px;
+      font-family: 'Times New Roman', serif;
+      font-weight: bold;
+      cursor: pointer;
+      display: block;
+    }
+    .submenu {
+      display: flex;
+      flex-direction: column;
+      margin-top: 10px;
+      margin-left: 10px;
+      transform: translateX(-20px);
+      opacity: 0;
+      max-height: 0;
+      overflow: hidden;
+      transition: transform 0.3s ease, opacity 0.3s ease, max-height 0.3s ease;
+    }
+    .menu-item.open .submenu {
+      opacity: 1;
+      transform: translateX(0);
+      max-height: 200px;
+    }
+    .submenu a {
+      font-family: 'Times New Roman', serif;
+      font-weight: 300; /* lighter/skinnier text */
+      color: #000;
+      text-decoration: none;
+      font-size: 18px;
+      display: block;
+      padding-left: 10px;
+      margin: 5px 0;
+    }
+    .submenu a:hover {
+      text-decoration: underline;
+    }
+    nav a:not(.submenu a) {
+      font-size: 20px;
+      color: #000;
+      text-decoration: none;
+      margin: 20px 0;
+      font-family: 'Times New Roman', serif;
+      font-weight: bold;
+      padding-left: 30px;
+      display: block;
+    }
+    nav a:not(.submenu a):hover {
+      text-decoration: underline;
+    }
+
+    /* About dropdown section */
+    .about-dropdown {
       max-width: 900px;
-      margin: 80px auto;
+      margin: 60px auto;
       padding: 0 20px;
       text-align: center;
     }
-    h1 {
-      font-weight: 900;
-      font-size: 50px;
-      margin-bottom: 20px;
+    .about-title {
+      font-weight: bold;
+      font-size: 28px;
+      cursor: pointer;
+      display: inline-block;
+      color: #000;
+      transition: all 0.3s ease;
     }
-    p {
+    .about-title:hover {
+      text-decoration: underline;
+    }
+    .about-content {
+      margin-top: 20px;
       font-size: 18px;
       color: #6b7280;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease;
     }
-    nav a {
-      text-decoration: none;
-      color: #0b72ff;
-      font-weight: 700;
-      margin: 0 15px;
-      font-size: 18px;
+    .about-dropdown.open .about-content {
+      max-height: 500px; /* adjust if needed */
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="menu-icon" id="menuToggle">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <h1 class="site-title">The Reboot</h1>
+  </header>
+
+  <nav id="navMenu">
+    <div class="menu-item">
+      <span class="parent-item">SciFi</span>
+      <div class="submenu">
+        <a href="post1.html">DUNE</a>
+      </div>
+    </div>
+    <a href="index.html">Home</a>
+  </nav>
+
+  <div class="about-dropdown" id="aboutDropdown">
+    <span class="about-title" id="aboutToggle">About</span>
+    <div class="about-content">
+      <p>This blog is dedicated to rebooted movies. Why do we look into the past? Maybe movie directors have the answer. Welcome to the Reboot, where I take economic history to the monetary stage. Enjoy!</p>
+    </div>
+  </div>
+
+  <script>
+    const menuToggle = document.getElementById('menuToggle');
+    const navMenu = document.getElementById('navMenu');
+    const parentItem = document.querySelector('.parent-item');
+    const aboutToggle = document.getElementById('aboutToggle');
+    const aboutDropdown = document.getElementById('aboutDropdown');
+
+    menuToggle.addEventListener('click', () => {
+      menuToggle.classList.toggle('open');
+      navMenu.classList.toggle('open');
+    });
+
+    parentItem.addEventListener('click', () => {
+      parentItem.parentElement.classList.toggle('open');
+    });
+
+    aboutToggle.addEventListener('click', () => {
+      aboutDropdown.classList.toggle('open');
+    });
+  </script>
+
+</body>
+</html>
