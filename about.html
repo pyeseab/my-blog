@@ -8,20 +8,20 @@
   <style>
     body {
       margin: 0;
-      font-family: 'Times New Roman', serif;
+      font-family: 'Times New Roman', serif; /* default for content */
       background: #ffffff;
       color: #0f172a;
       line-height: 1.6;
       overflow-x: hidden;
     }
 
-    /* Header */
+    /* Header at top */
     header {
       position: relative;
       display: flex;
       align-items: center;
       justify-content: center;
-      padding: 20px 0;
+      padding: 20px 0 10px 0; /* smaller bottom padding */
     }
 
     /* Hamburger icon */
@@ -72,7 +72,6 @@
       transform: translateX(0);
     }
 
-    /* Menu items */
     .menu-item {
       margin: 20px 0;
       padding-left: 30px;
@@ -127,25 +126,24 @@
       text-decoration: underline;
     }
 
-    /* Site title with horizontal lines */
+    /* Site title in Playfair Display with horizontal lines matching menu */
     .site-header {
       text-align: center;
-      margin: 40px 0;
-      position: relative;
+      width: 260px; /* matches nav width */
+      margin: 0 auto;
     }
     .site-header h1 {
-      font-size: 28px; /* smaller title */
+      font-family: 'Playfair Display', serif;
+      font-size: 28px; 
       font-weight: 900;
-      margin: 20px 0;
-      display: inline-block;
-      padding: 0 20px;
+      margin: 0;
+      padding: 0 0 10px 0;
     }
     .site-header hr {
       border: none;
       border-top: 1px solid #0f172a;
-      width: 100%;
-      position: relative;
-      top: 0;
+      width: 100%; /* matches nav width */
+      margin: 0;
     }
 
     /* About section left-aligned */
@@ -157,11 +155,11 @@
     }
     .about-section h2 {
       font-weight: bold;
-      font-size: 36px; /* larger heading */
+      font-size: 36px;
       margin-bottom: 20px;
     }
     .about-section p {
-      font-size: 20px; /* larger subtext */
+      font-size: 20px;
       color: #6b7280;
       line-height: 1.8;
       margin: 0;
