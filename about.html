@@ -116,28 +116,32 @@
       text-decoration: underline;
     }
 
-    /* Header title with horizontal lines */
+    /* Header with horizontal lines and title */
     .site-header {
       text-align: center;
       margin-top: 40px;
+      position: relative;
+      transition: opacity 0.4s;
     }
     .site-header h1 {
       font-family: 'Playfair Display', serif;
       font-weight: 900;
-      font-size: 28px;
+      font-size: 24px; /* slightly smaller */
       margin: 10px 0;
+      display: inline-block;
+      padding: 0 10px;
     }
     .site-header hr {
       border: none;
       border-top: 1px solid #0f172a;
-      width: 75%; /* roughly 3/4 of page width */
+      width: 80%; /* slightly longer lines */
       margin: 0 auto;
     }
 
-    /* About section slightly lower and shifted right */
+    /* About section */
     .about-section {
       max-width: 900px;
-      margin: 100px auto 40px auto; /* move lower */
+      margin: 120px auto 40px auto; /* slightly lower than header */
       padding-left: 40px; /* slightly right */
       text-align: left;
     }
@@ -174,7 +178,7 @@
   </nav>
 
   <!-- Header with horizontal lines -->
-  <div class="site-header">
+  <div class="site-header" id="siteHeader">
     <hr>
     <h1>The Reboot</h1>
     <hr>
@@ -190,7 +194,9 @@
     const menuToggle = document.getElementById('menuToggle');
     const navMenu = document.getElementById('navMenu');
     const parentItem = document.querySelector('.parent-item');
+    const siteHeader = document.getElementById('siteHeader');
 
+    // Hamburger menu toggle
     menuToggle.addEventListener('click', () => {
       menuToggle.classList.toggle('open');
       navMenu.classList.toggle('open');
@@ -198,6 +204,16 @@
 
     parentItem.addEventListener('click', () => {
       parentItem.parentElement.classList.toggle('open');
+    });
+
+    // Scroll effect: fade header after scrolling
+    window.addEventListener('scroll', () => {
+      const scrollPos = window.scrollY;
+      if(scrollPos < 150) {
+        siteHeader.style.opacity = 1 - scrollPos / 150;
+      } else {
+        siteHeader.style.opacity = 0;
+      }
     });
   </script>
 
