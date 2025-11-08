@@ -65,7 +65,7 @@
     }
     .parent-item {
       font-family: 'Times New Roman', serif;
-      font-weight: 400; /* match Home */
+      font-weight: 400; /* same weight as Home */
       font-size: 22px;
       cursor: pointer;
       padding-left: 30px;
@@ -98,9 +98,8 @@
     }
     .menu-item a.home-link {
       padding-left: 30px;
+      text-decoration: none; /* removed underline */
       font-weight: 400;
-      text-decoration: none;
-      color: #000;
     }
 
     .site-header {
@@ -142,7 +141,7 @@
     /* SUBHEADLINE */
     .post-content h2 {
       font-family: 'Helvetica Neue', sans-serif;
-      font-weight: 600; /* slightly lighter bold */
+      font-weight: 500; /* lighter than before */
       font-size: 23px;
       margin-top: 15px;
       margin-bottom: 25px;
@@ -200,7 +199,8 @@
       margin: 20px 0;
     }
 
-    .image-caption {
+    /* Image captions */
+    .caption {
       font-family: 'Times New Roman', serif;
       font-size: 14px;
       color: #555;
@@ -244,7 +244,7 @@
     </div>
 
     <img src="images/Dune edit.jpg" alt="Title image — Makassar’s Spice Monopoly">
-    <div class="image-caption">Dune saga</div>
+    <div class="caption">Dune saga</div>
 
     <p>Our first post at Reboot takes us east — to Makassar, on the Indonesian archipelago. In the 17th century, Makassar thrived as a bustling port city at the heart of the spice trade. Its docks pulsed with a vibrant network of European interlopers, sultanate kingdoms, and Sama mariners whose voyages reached as far as the Australian coast.</p>
     <p>Makassar’s rise as a political and maritime power — sustained by emerging technologies of navigation and trade — eventually collided with the Dutch East India Company. By century’s end, the VOC had claimed a monopoly over the region’s lucrative spice trade. Though Makassar proved a financial disappointment for directors back in the Netherlands, a new community of traders, fishermen, and sailors took root, carving livelihoods from the surrounding seas. Scholars note that as global trade shifted toward smaller cargo and a tighter monopoly, Makassar was left behind modern development.</p>
@@ -263,7 +263,7 @@
     <p>VOC shipping records reveal a sharp decline in trade diversity — a shift from varied goods to greater monetisation. The fall of Makassar left its trade channels dry, a stark reminder on monopoly and often their destructive cost.</p>
 
     <img src="images/graph.png.jpg" alt="Graph — VOC trade data">
-    <div class="image-caption">Source from shipping records of the VOC Spiegelschepen R plot</div>
+    <div class="caption">Source from shipping records of the VOC Spiegelschepen R plot</div>
 
     <h2 class="credits-title">CREDITS</h2>
     <ol>
@@ -274,6 +274,7 @@
     </ol>
 
     <h2 class="credits-title">POST CREDITS RE-BITE</h2>
+
     <p style="font-style:italic; font-size:28px; text-align:center; line-height:1.2; margin-top:30px; margin-bottom:10px;">
       “even better how would you like to have the remaining sake?”
     </p>
