@@ -15,20 +15,11 @@
       overflow-x: hidden;
     }
 
-    /* Header */
-    header {
-      position: relative;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 20px 0 0 0;
-    }
-
-    /* Hamburger icon */
+    /* Hamburger menu icon */
     .menu-icon {
-      position: absolute;
+      position: fixed;
       left: 20px;
-      top: 25px;
+      top: 30px;
       cursor: pointer;
       z-index: 1001;
       width: 28px;
@@ -71,7 +62,6 @@
     nav.open {
       transform: translateX(0);
     }
-
     .menu-item {
       margin: 20px 0;
       padding-left: 30px;
@@ -126,39 +116,39 @@
       text-decoration: underline;
     }
 
-    /* Site title with full-width horizontal lines */
+    /* Header with horizontal lines and title */
     .site-header {
-      text-align: center;
-      width: 100%; /* full width */
       position: relative;
-      margin-bottom: 80px; /* add space for About section below */
+      text-align: center;
+      margin-top: 40px;
+      margin-left: 260px; /* align with dropdown menu width */
+    }
+    .site-header hr.top-line {
+      border: none;
+      border-top: 1px solid #0f172a;
+      margin-bottom: 10px;
+      width: calc(100% - 260px); /* stops before dropdown menu */
+    }
+    .site-header hr.bottom-line {
+      border: none;
+      border-top: 1px solid #0f172a;
+      margin-top: 10px;
+      width: calc(100% - 260px); /* stops before dropdown menu */
     }
     .site-header h1 {
       font-family: 'Playfair Display', serif;
-      font-size: 28px;
       font-weight: 900;
+      font-size: 28px;
       margin: 0;
-      padding: 0 20px;
       display: inline-block;
-      position: relative;
-      z-index: 1;
-      background: #fff; /* overlay to prevent lines crossing text */
-    }
-    .site-header hr {
-      border: none;
-      border-top: 1px solid #0f172a;
-      width: 100%;
-      position: absolute;
-      top: 50%;
-      left: 0;
-      z-index: 0;
+      padding: 0 10px;
     }
 
-    /* About section left-aligned, lower down */
+    /* About section slightly right */
     .about-section {
       max-width: 900px;
-      margin: 120px auto 40px auto; /* lower the section further down */
-      padding: 0 20px;
+      margin: 160px auto 40px auto; /* lower down */
+      padding-left: 40px; /* shift slightly right */
       text-align: left;
     }
     .about-section h2 {
@@ -176,21 +166,13 @@
 </head>
 <body>
 
-  <!-- Header -->
-  <header>
-    <div class="menu-icon" id="menuToggle">
-      <div></div>
-      <div></div>
-      <div></div>
-    </div>
-    <div class="site-header">
-      <hr>
-      <h1>The Reboot</h1>
-      <hr>
-    </div>
-  </header>
+  <!-- Hamburger menu -->
+  <div class="menu-icon" id="menuToggle">
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
 
-  <!-- Navigation -->
   <nav id="navMenu">
     <div class="menu-item">
       <span class="parent-item">SciFi</span>
@@ -200,6 +182,13 @@
     </div>
     <a href="index.html">Home</a>
   </nav>
+
+  <!-- Header with horizontal lines -->
+  <div class="site-header">
+    <hr class="top-line">
+    <h1>The Reboot</h1>
+    <hr class="bottom-line">
+  </div>
 
   <!-- About content -->
   <div class="about-section">
