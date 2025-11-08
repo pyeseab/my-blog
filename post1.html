@@ -74,7 +74,7 @@
     .submenu {
       display: flex;
       flex-direction: column;
-      margin-left: 40px; /* <-- indent submenu (DUNE) */
+      margin-left: 40px;
       max-height: 0;
       overflow: hidden;
       transition: 0.3s ease;
@@ -91,7 +91,7 @@
       color: #000;
       text-decoration: none;
       margin: 5px 0;
-      padding-left: 10px; /* small inner padding for neat look */
+      padding-left: 10px;
     }
     .submenu a:hover {
       text-decoration: underline;
@@ -151,7 +151,7 @@
     }
     .author-date p {
       margin: 2px 0;
-      font-size: 16px; /* ensure same size as rest of text */
+      font-size: 16px;
       font-weight: normal;
     }
 
@@ -160,22 +160,7 @@
       font-size: 19px;
     }
 
-    /* Newspaper-style drop cap for ONLY the first paragraph in post-content */
-    .post-content p:first-of-type::first-letter {
-      font-size: 3em;
-      font-weight: bold;
-      float: left;
-      line-height: 1;
-      margin-right: 8px;
-      font-family: 'Times New Roman', serif;
-    }
-    /* Prevent affecting author/date area */
-    .author-date p::first-letter {
-      font-size: inherit;
-      font-weight: inherit;
-      float: none;
-      margin: 0;
-    }
+    /* Removed drop cap styling */
 
     blockquote {
       font-family: 'Filosofia', serif;
