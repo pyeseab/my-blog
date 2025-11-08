@@ -77,8 +77,57 @@
     nav.open {
       transform: translateX(0);
     }
-    nav a {
+
+    /* Top-level menu item */
+    .menu-item {
+      margin: 20px 0;
+      padding-left: 30px;
+    }
+    .parent-item {
+      font-size: 20px;
+      font-family: 'Times New Roman', serif;
+      font-weight: bold;
+      cursor: pointer;
       display: block;
+    }
+
+    /* Submenu hidden and slid left by default */
+    .submenu {
+      display: flex;
+      flex-direction: column;
+      margin-top: 10px;
+      margin-left: 10px;
+      transform: translateX(-20px);
+      opacity: 0;
+      max-height: 0;
+      overflow: hidden;
+      transition: transform 0.3s ease, opacity 0.3s ease, max-height 0.3s ease;
+    }
+
+    /* Show submenu when parent is clicked */
+    .menu-item.open .submenu {
+      opacity: 1;
+      transform: translateX(0);
+      max-height: 200px; /* adjust if more sub-items added */
+    }
+
+    /* Light-weight text for sub-item */
+    .submenu a {
+      font-family: 'Times New Roman', serif;
+      font-weight: 300;
+      color: #000;
+      text-decoration: none;
+      font-size: 18px;
+      display: block;
+      padding-left: 10px;
+      margin: 5px 0;
+    }
+    .submenu a:hover {
+      text-decoration: underline;
+    }
+
+    /* Regular link */
+    nav a:not(.submenu a) {
       font-size: 20px;
       color: #000;
       text-decoration: none;
@@ -86,8 +135,9 @@
       font-family: 'Times New Roman', serif;
       font-weight: bold;
       padding-left: 30px;
+      display: block;
     }
-    nav a:hover {
+    nav a:not(.submenu a):hover {
       text-decoration: underline;
     }
 
@@ -107,27 +157,28 @@
       object-fit: cover;
     }
 
-    /* Darker gradient */
+    /* Darker gradient overlay */
     .overlay {
       position: absolute;
       bottom: 0;
       left: 0;
       right: 0;
       height: 100%;
-      background: linear-gradient(to top, rgba(0,0,0,0.9), rgba(0,0,0,0.1));
+      background: linear-gradient(to top, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.6) 40%, rgba(0,0,0,0.1) 80%);
       border-radius: 0;
     }
 
-    /* Centered text on image */
+    /* Lowered text overlay */
     .text-overlay {
       position: absolute;
-      top: 50%;
+      bottom: 40px;
       left: 50%;
-      transform: translate(-50%, -50%);
+      transform: translateX(-50%);
       color: #ffffff;
       text-align: center;
       width: 90%;
     }
+
     .issue {
       font-size: 14px;
       letter-spacing: 1px;
@@ -135,6 +186,7 @@
       color: #ddd;
       margin-bottom: 8px;
     }
+
     .text-overlay h2 {
       font-size: 28px;
       font-weight: 700;
@@ -146,10 +198,12 @@
       color: #ffffff;
       text-decoration: underline;
     }
+
     .byline {
-      font-size: 14px;
+      font-size: 15px;
       color: #ccc;
-      margin-top: 8px;
+      margin-top: 10px;
+      line-height: 1.4;
     }
 
     footer {
@@ -174,7 +228,12 @@
   </header>
 
   <nav id="navMenu">
-    <a href="post1.html">First Post</a>
+    <div class="menu-item">
+      <span class="parent-item">SciFi</span>
+      <div class="submenu">
+        <a href="post1.html">DUNE</a>
+      </div>
+    </div>
     <a href="about.html">About</a>
   </nav>
 
@@ -185,7 +244,10 @@
       <div class="text-overlay">
         <div class="issue">November Issue</div>
         <h2>Makassar’s Spice Monopoly: A Reanalysis of Seventeenth-Century Trade</h2>
-        <div class="byline">By Peter Yeseab — 8 November 2025</div>
+        <div class="byline">
+          By Peter Yeseab<br>
+          8 November 2025
+        </div>
       </div>
     </a>
   </section>
@@ -197,10 +259,15 @@
   <script>
     const menuToggle = document.getElementById('menuToggle');
     const navMenu = document.getElementById('navMenu');
+    const parentItem = document.querySelector('.parent-item');
 
     menuToggle.addEventListener('click', () => {
       menuToggle.classList.toggle('open');
       navMenu.classList.toggle('open');
+    });
+
+    parentItem.addEventListener('click', () => {
+      parentItem.parentElement.classList.toggle('open');
     });
   </script>
 
