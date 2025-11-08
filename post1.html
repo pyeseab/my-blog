@@ -10,7 +10,8 @@
       font-family: 'Times New Roman', serif;
       background-color: #ffffff;
       color: #000000;
-      line-height: 1.6;
+      line-height: 1.8;
+      font-size: 18px; /* slightly larger body text */
       margin: 0;
     }
 
@@ -145,13 +146,13 @@
       padding: 0 20px;
     }
     .post-content h1 {
-      font-family: Bodoni, serif; /* Main title font */
+      font-family: Bodoni, serif;
       font-size: 36px;
-      font-weight: 900; /* Bolder */
+      font-weight: 900;
       margin-bottom: 10px;
     }
     .post-content h2 {
-      font-family: 'Helvetica Neue', sans-serif; /* Subheading font */
+      font-family: 'Helvetica Neue', sans-serif;
       font-size: 20px;
       font-weight: 400;
       color: #000000;
@@ -159,27 +160,38 @@
       margin-bottom: 20px;
     }
     .author-date {
-      text-align: left; /* aligned left */
+      text-align: left;
       font-family: 'Times New Roman', serif;
       font-size: 14px;
       font-weight: 400;
       color: #555;
       margin-bottom: 20px;
-      line-height: 1.2; /* reduced spacing between lines */
+      line-height: 1.2;
     }
     .author-date p {
-      margin: 2px 0; /* tighter vertical spacing */
+      margin: 2px 0;
     }
     .post-content p {
-      margin-bottom: 16px;
+      margin-bottom: 18px;
     }
+
+    /* Quote styling */
     blockquote {
-      border-top: 2px solid #000;
-      border-bottom: 2px solid #000;
+      font-family: Georgia, serif;
+      font-size: 22px; /* larger than body */
+      font-weight: bold;
       margin: 20px 0;
-      padding: 10px 0;
-      font-style: italic;
+      padding: 0;
+      border: none;
+      color: #000;
     }
+    blockquote .quote-source {
+      font-size: 16px;
+      font-weight: normal;
+      margin-top: 4px;
+      color: #555;
+    }
+
     img {
       max-width: 100%;
       height: auto;
@@ -252,7 +264,10 @@
     <h2>From Spices to Search Engines</h2>
     <p>Fast forward to the present: Google has been fined €2.42 billion by the European Commission — a regulatory action reminiscent of America’s antitrust actions against Standard Oil.</p>
 
-    <blockquote>“The same worms that will eat me will someday eat you too.”</blockquote>
+    <blockquote>
+      “The same worms that will eat me will someday eat you too.”
+      <span class="quote-source">— Viagra Boys</span>
+    </blockquote>
 
     <h2>The Cost of the Spice</h2>
     <p>On Arrakis, the spice flows — but so does the cost. Maybe David Lynch’s coffee addiction fuelled his 176-minute space epic, but its sequel reimagines Wadi Rum and the Abu Dhabi desert so harsh it could make even Zendaya faint.</p>
