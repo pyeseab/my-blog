@@ -55,6 +55,16 @@
     .author-date p { margin:2px 0; }
     .post-content p { margin-bottom:21px; font-size:19px; }
 
+    /* Newspaper-style drop cap for first paragraph */
+    .post-content p:first-of-type::first-letter {
+      font-size: 3em;
+      font-weight: bold;
+      float: left;
+      line-height: 1;
+      margin-right: 8px;
+      font-family: 'Times New Roman', serif;
+    }
+
     blockquote {
       font-family:'Filosofia', serif;
       font-size:48px;
