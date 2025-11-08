@@ -8,20 +8,20 @@
   <style>
     body {
       margin: 0;
-      font-family: 'Times New Roman', serif; /* default for content */
+      font-family: 'Times New Roman', serif;
       background: #ffffff;
       color: #0f172a;
       line-height: 1.6;
       overflow-x: hidden;
     }
 
-    /* Header at top */
+    /* Header */
     header {
       position: relative;
       display: flex;
       align-items: center;
       justify-content: center;
-      padding: 20px 0 10px 0; /* smaller bottom padding */
+      padding: 20px 0 0 0;
     }
 
     /* Hamburger icon */
@@ -126,37 +126,45 @@
       text-decoration: underline;
     }
 
-    /* Site title in Playfair Display with horizontal lines matching menu */
+    /* Site title with full-width horizontal lines */
     .site-header {
       text-align: center;
-      width: 260px; /* matches nav width */
-      margin: 0 auto;
+      width: 100%; /* full width */
+      position: relative;
+      margin-bottom: 80px; /* add space for About section below */
     }
     .site-header h1 {
       font-family: 'Playfair Display', serif;
-      font-size: 28px; 
+      font-size: 28px;
       font-weight: 900;
       margin: 0;
-      padding: 0 0 10px 0;
+      padding: 0 20px;
+      display: inline-block;
+      position: relative;
+      z-index: 1;
+      background: #fff; /* overlay to prevent lines crossing text */
     }
     .site-header hr {
       border: none;
       border-top: 1px solid #0f172a;
-      width: 100%; /* matches nav width */
-      margin: 0;
+      width: 100%;
+      position: absolute;
+      top: 50%;
+      left: 0;
+      z-index: 0;
     }
 
-    /* About section left-aligned */
+    /* About section left-aligned, lower down */
     .about-section {
       max-width: 900px;
-      margin: 40px auto;
+      margin: 120px auto 40px auto; /* lower the section further down */
       padding: 0 20px;
       text-align: left;
     }
     .about-section h2 {
       font-weight: bold;
       font-size: 36px;
-      margin-bottom: 20px;
+      margin-bottom: 24px;
     }
     .about-section p {
       font-size: 20px;
