@@ -116,39 +116,29 @@
       text-decoration: underline;
     }
 
-    /* Header with horizontal lines and title */
+    /* Header title with horizontal lines */
     .site-header {
-      position: relative;
       text-align: center;
       margin-top: 40px;
-      margin-left: 260px; /* align with dropdown menu width */
-    }
-    .site-header hr.top-line {
-      border: none;
-      border-top: 1px solid #0f172a;
-      margin-bottom: 10px;
-      width: calc(100% - 260px); /* stops before dropdown menu */
-    }
-    .site-header hr.bottom-line {
-      border: none;
-      border-top: 1px solid #0f172a;
-      margin-top: 10px;
-      width: calc(100% - 260px); /* stops before dropdown menu */
     }
     .site-header h1 {
       font-family: 'Playfair Display', serif;
       font-weight: 900;
       font-size: 28px;
-      margin: 0;
-      display: inline-block;
-      padding: 0 10px;
+      margin: 10px 0;
+    }
+    .site-header hr {
+      border: none;
+      border-top: 1px solid #0f172a;
+      width: 75%; /* roughly 3/4 of page width */
+      margin: 0 auto;
     }
 
-    /* About section slightly right */
+    /* About section slightly lower and shifted right */
     .about-section {
       max-width: 900px;
-      margin: 160px auto 40px auto; /* lower down */
-      padding-left: 40px; /* shift slightly right */
+      margin: 100px auto 40px auto; /* move lower */
+      padding-left: 40px; /* slightly right */
       text-align: left;
     }
     .about-section h2 {
@@ -185,9 +175,9 @@
 
   <!-- Header with horizontal lines -->
   <div class="site-header">
-    <hr class="top-line">
+    <hr>
     <h1>The Reboot</h1>
-    <hr class="bottom-line">
+    <hr>
   </div>
 
   <!-- About content -->
