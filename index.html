@@ -104,11 +104,15 @@
       transition: transform 0.3s ease, opacity 0.3s ease, max-height 0.3s ease;
     }
 
+    .submenu a.indent {
+      padding-left: 20px; /* further indentation for nested items */
+    }
+
     /* Show submenu when parent is clicked */
     .menu-item.open .submenu {
       opacity: 1;
       transform: translateX(0);
-      max-height: 200px; /* adjust if more sub-items added */
+      max-height: 400px; /* adjusted to fit nested submenu */
     }
 
     /* Light-weight text for sub-item */
@@ -175,7 +179,7 @@
       left: 50%;
       transform: translateX(-50%);
       color: #ffffff;
-      text-align: center;
+      text-align: left; /* changed to left */
       width: 90%;
     }
 
@@ -193,6 +197,7 @@
       margin: 0;
       transition: all 0.3s ease;
       display: inline-block;
+      text-align: left; /* changed to left */
     }
     .text-overlay h2:hover {
       color: #ffffff;
@@ -223,12 +228,11 @@
       width: 50%;
       margin: 20px 0;
     }
-    .rtl-gold-title {
+    .gold-title {
       font-size: 14px;
       color: gold;
-      direction: rtl;
-      text-align: right;
       margin-bottom: 5px;
+      text-align: left; /* left-aligned */
     }
 
     footer {
@@ -257,6 +261,8 @@
       <span class="parent-item">SciFi</span>
       <div class="submenu">
         <a href="post1.html">DUNE</a>
+        <a href="featurespost2.html" class="indent">James Bond Series</a>
+        <a href="featurespost2.html" class="indent">Casino Royale</a>
       </div>
     </div>
     <a href="about.html">About</a>
@@ -287,7 +293,7 @@
         <img src="images/Bondheadline.jpg" alt="James Bond Series">
         <div class="overlay"></div>
         <div class="text-overlay">
-          <div class="rtl-gold-title">s e i r e s  d n o b  s e m a J</div>
+          <div class="gold-title">James Bond Series</div>
           <h2>Casino Royale: The Poyais Bluff</h2>
         </div>
       </a>
