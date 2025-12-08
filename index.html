@@ -104,10 +104,6 @@
       transition: transform 0.3s ease, opacity 0.3s ease, max-height 0.3s ease;
     }
 
-    .submenu a.indent {
-      padding-left: 20px; /* further indentation for nested items */
-    }
-
     /* Show submenu when parent is clicked */
     .menu-item.open .submenu {
       opacity: 1;
@@ -126,6 +122,11 @@
       padding-left: 10px;
       margin: 5px 0;
     }
+
+    .submenu a.indent {
+      padding-left: 20px; /* further indentation for nested items */
+    }
+
     .submenu a:hover {
       text-decoration: underline;
     }
@@ -179,7 +180,7 @@
       left: 50%;
       transform: translateX(-50%);
       color: #ffffff;
-      text-align: left; /* changed to left */
+      text-align: left; /* left-aligned for new post */
       width: 90%;
     }
 
@@ -197,7 +198,7 @@
       margin: 0;
       transition: all 0.3s ease;
       display: inline-block;
-      text-align: left; /* changed to left */
+      text-align: left;
     }
     .text-overlay h2:hover {
       color: #ffffff;
@@ -232,7 +233,7 @@
       font-size: 14px;
       color: gold;
       margin-bottom: 5px;
-      text-align: left; /* left-aligned */
+      text-align: left;
     }
 
     footer {
@@ -261,14 +262,18 @@
       <span class="parent-item">SciFi</span>
       <div class="submenu">
         <a href="post1.html">DUNE</a>
-        <a href="featurespost2.html" class="indent">James Bond Series</a>
+      </div>
+    </div>
+    <div class="menu-item">
+      <span class="parent-item">James Bond Series</span>
+      <div class="submenu">
         <a href="featurespost2.html" class="indent">Casino Royale</a>
       </div>
     </div>
     <a href="about.html">About</a>
   </nav>
 
-  <!-- First Featured Post -->
+  <!-- First Featured Post (unchanged) -->
   <section class="featured">
     <a href="post1.html">
       <img src="images/Dune edit.jpg" alt="Makassar’s Spice Monopoly: A Reanalysis of Seventeenth-Century Trade">
@@ -284,20 +289,16 @@
     </a>
   </section>
 
-  <!-- Features Section -->
-  <section class="features">
-    <h2 class="features-title">Features</h2>
-
-    <div class="featured half-width">
-      <a href="featurespost2.html">
-        <img src="images/Bondheadline.jpg" alt="James Bond Series">
-        <div class="overlay"></div>
-        <div class="text-overlay">
-          <div class="gold-title">James Bond Series</div>
-          <h2>Casino Royale: The Poyais Bluff</h2>
-        </div>
-      </a>
-    </div>
+  <!-- New James Bond Post -->
+  <section class="featured half-width">
+    <a href="featurespost2.html">
+      <img src="images/Bondheadline.jpg" alt="James Bond Series">
+      <div class="overlay"></div>
+      <div class="text-overlay">
+        <div class="gold-title">James Bond Series</div>
+        <h2>Casino Royale: The Poyais Bluff</h2>
+      </div>
+    </a>
   </section>
 
   <footer>
@@ -307,15 +308,17 @@
   <script>
     const menuToggle = document.getElementById('menuToggle');
     const navMenu = document.getElementById('navMenu');
-    const parentItem = document.querySelector('.parent-item');
+    const parentItems = document.querySelectorAll('.parent-item');
 
     menuToggle.addEventListener('click', () => {
       menuToggle.classList.toggle('open');
       navMenu.classList.toggle('open');
     });
 
-    parentItem.addEventListener('click', () => {
-      parentItem.parentElement.classList.toggle('open');
+    parentItems.forEach(item => {
+      item.addEventListener('click', () => {
+        item.parentElement.classList.toggle('open');
+      });
     });
   </script>
 
