@@ -108,13 +108,12 @@
     .menu-item.open .submenu {
       opacity: 1;
       transform: translateX(0);
-      max-height: 400px; /* adjusted to fit nested submenu */
+      max-height: 400px;
     }
 
-    /* Light-weight text for sub-item */
     .submenu a {
       font-family: 'Times New Roman', serif;
-      font-weight: 300; /* lighter/skinnier text */
+      font-weight: 300;
       color: #000;
       text-decoration: none;
       font-size: 18px;
@@ -122,16 +121,13 @@
       padding-left: 10px;
       margin: 5px 0;
     }
-
     .submenu a.indent {
-      padding-left: 20px; /* further indentation for nested items */
+      padding-left: 20px;
     }
-
     .submenu a:hover {
       text-decoration: underline;
     }
 
-    /* Regular link */
     nav a:not(.submenu a) {
       font-size: 20px;
       color: #000;
@@ -162,7 +158,6 @@
       object-fit: cover;
     }
 
-    /* Darker gradient overlay (bottom fully black) */
     .overlay {
       position: absolute;
       bottom: 0;
@@ -173,14 +168,13 @@
       border-radius: 0;
     }
 
-    /* Lowered text overlay */
     .text-overlay {
       position: absolute;
       bottom: 40px;
       left: 50%;
       transform: translateX(-50%);
       color: #ffffff;
-      text-align: left; /* left-aligned for new post */
+      text-align: left;
       width: 90%;
     }
 
@@ -196,7 +190,6 @@
       font-size: 28px;
       font-weight: 700;
       margin: 0;
-      transition: all 0.3s ease;
       display: inline-block;
       text-align: left;
     }
@@ -212,19 +205,14 @@
       line-height: 1.4;
     }
 
-    /* Features Section */
-    .features {
-      width: 90%;
-      max-width: 900px;
-      margin: 60px auto;
-      text-align: left;
-    }
     .features-title {
       font-family: 'Playfair Display', serif;
       font-size: 32px;
       font-weight: 700;
       margin-bottom: 20px;
+      text-align: left;
     }
+
     .featured.half-width {
       width: 50%;
       margin: 20px 0;
@@ -244,83 +232,118 @@
       text-align: center;
       border-top: 1px solid #f0f0f0;
     }
+    .time-ago {
+      position: absolute;
+      bottom: 10px;
+      right: 10px;
+      color: #ccc;
+      font-size: 12px;
+    }
   </style>
 </head>
 <body>
 
-  <header>
-    <div class="menu-icon" id="menuToggle">
-      <div></div>
-      <div></div>
-      <div></div>
+<header>
+  <div class="menu-icon" id="menuToggle">
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+  <h1>The Reboot</h1>
+</header>
+
+<nav id="navMenu">
+  <div class="menu-item">
+    <span class="parent-item">SciFi</span>
+    <div class="submenu">
+      <a href="post1.html">DUNE</a>
     </div>
-    <h1>The Reboot</h1>
-  </header>
+  </div>
+  <div class="menu-item">
+    <span class="parent-item">James Bond Series</span>
+    <div class="submenu">
+      <a href="featurespost2.html" class="indent">Casino Royale</a>
+    </div>
+  </div>
+  <a href="about.html">About</a>
+</nav>
 
-  <nav id="navMenu">
-    <div class="menu-item">
-      <span class="parent-item">SciFi</span>
-      <div class="submenu">
-        <a href="post1.html">DUNE</a>
+<!-- First Featured Post -->
+<section class="featured">
+  <a href="post1.html">
+    <img src="images/Dune edit.jpg" alt="Makassar’s Spice Monopoly">
+    <div class="overlay"></div>
+    <div class="text-overlay">
+      <div class="issue">November Issue</div>
+      <h2>Makassar’s Spice Monopoly: A Reanalysis of Seventeenth-Century Trade</h2>
+      <div class="byline">
+        By Peter Yeseab<br>
+        8 November 2025
       </div>
     </div>
-    <div class="menu-item">
-      <span class="parent-item">James Bond Series</span>
-      <div class="submenu">
-        <a href="featurespost2.html" class="indent">Casino Royale</a>
-      </div>
+  </a>
+</section>
+
+<!-- James Bond Post -->
+<section class="featured half-width">
+  <a href="featurespost2.html">
+    <img src="images/Bondheadline.jpg" alt="James Bond Series">
+    <div class="overlay"></div>
+    <div class="text-overlay">
+      <div class="gold-title">James Bond Series</div>
+      <h2>Casino Royale: The Poyais Bluff</h2>
+      <div class="time-ago" id="bondTime"></div>
     </div>
-    <a href="about.html">About</a>
-  </nav>
+  </a>
+</section>
 
-  <!-- First Featured Post (unchanged) -->
-  <section class="featured">
-    <a href="post1.html">
-      <img src="images/Dune edit.jpg" alt="Makassar’s Spice Monopoly: A Reanalysis of Seventeenth-Century Trade">
-      <div class="overlay"></div>
-      <div class="text-overlay">
-        <div class="issue">November Issue</div>
-        <h2>Makassar’s Spice Monopoly: A Reanalysis of Seventeenth-Century Trade</h2>
-        <div class="byline">
-          By Peter Yeseab<br>
-          8 November 2025
-        </div>
-      </div>
-    </a>
-  </section>
+<footer>
+  © 2025 The Reboot — All rights reserved.
+</footer>
 
-  <!-- New James Bond Post -->
-  <section class="featured half-width">
-    <a href="featurespost2.html">
-      <img src="images/Bondheadline.jpg" alt="James Bond Series">
-      <div class="overlay"></div>
-      <div class="text-overlay">
-        <div class="gold-title">James Bond Series</div>
-        <h2>Casino Royale: The Poyais Bluff</h2>
-      </div>
-    </a>
-  </section>
+<script>
+  const menuToggle = document.getElementById('menuToggle');
+  const navMenu = document.getElementById('navMenu');
+  const parentItems = document.querySelectorAll('.parent-item');
 
-  <footer>
-    © 2025 The Reboot — All rights reserved.
-  </footer>
+  menuToggle.addEventListener('click', () => {
+    menuToggle.classList.toggle('open');
+    navMenu.classList.toggle('open');
+  });
 
-  <script>
-    const menuToggle = document.getElementById('menuToggle');
-    const navMenu = document.getElementById('navMenu');
-    const parentItems = document.querySelectorAll('.parent-item');
-
-    menuToggle.addEventListener('click', () => {
-      menuToggle.classList.toggle('open');
-      navMenu.classList.toggle('open');
+  parentItems.forEach(item => {
+    item.addEventListener('click', () => {
+      item.parentElement.classList.toggle('open');
     });
+  });
 
-    parentItems.forEach(item => {
-      item.addEventListener('click', () => {
-        item.parentElement.classList.toggle('open');
-      });
-    });
-  </script>
+  // Dynamic time ago for James Bond post
+  const bondPostTime = new Date("2025-12-06T10:00:00"); // replace with actual post time
+  const bondTimeEl = document.getElementById("bondTime");
+
+  function updateTimeAgo() {
+    const now = new Date();
+    const diff = now - bondPostTime;
+    const seconds = Math.floor(diff / 1000);
+    const minutes = Math.floor(seconds / 60);
+    const hours = Math.floor(minutes / 60);
+    const days = Math.floor(hours / 24);
+    const weeks = Math.floor(days / 7);
+    const months = Math.floor(days / 30);
+
+    let display = "";
+    if (hours < 24) display = hours + "h ago";
+    else if (days < 7) display = days + "d ago";
+    else if (weeks < 4) display = weeks + "w ago";
+    else if (months < 3) display = months + "mo ago";
+    else display = bondPostTime.toLocaleDateString();
+
+    bondTimeEl.textContent = display;
+  }
+
+  updateTimeAgo();
+  setInterval(updateTimeAgo, 60000); // update every minute
+</script>
 
 </body>
 </html>
