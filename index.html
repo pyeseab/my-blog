@@ -78,7 +78,7 @@
       transform: translateX(0);
     }
 
-    /* Top-level menu item */
+    /* Menu items */
     .menu-item {
       margin: 20px 0;
       padding-left: 30px;
@@ -91,7 +91,6 @@
       display: block;
     }
 
-    /* Submenu hidden and slid left by default */
     .submenu {
       display: flex;
       flex-direction: column;
@@ -104,7 +103,6 @@
       transition: transform 0.3s ease, opacity 0.3s ease, max-height 0.3s ease;
     }
 
-    /* Show submenu when parent is clicked */
     .menu-item.open .submenu {
       opacity: 1;
       transform: translateX(0);
@@ -121,9 +119,11 @@
       padding-left: 10px;
       margin: 5px 0;
     }
+
     .submenu a.indent {
       padding-left: 20px;
     }
+
     .submenu a:hover {
       text-decoration: underline;
     }
@@ -174,8 +174,12 @@
       left: 50%;
       transform: translateX(-50%);
       color: #ffffff;
-      text-align: left;
       width: 90%;
+    }
+
+    /* Centered text for first post */
+    .text-overlay.center {
+      text-align: center;
     }
 
     .issue {
@@ -190,8 +194,6 @@
       font-size: 28px;
       font-weight: 700;
       margin: 0;
-      display: inline-block;
-      text-align: left;
     }
     .text-overlay h2:hover {
       color: #ffffff;
@@ -205,14 +207,19 @@
       line-height: 1.4;
     }
 
+    /* Features Section */
+    .features {
+      width: 90%;
+      max-width: 900px;
+      margin: 60px auto;
+      text-align: left;
+    }
     .features-title {
       font-family: 'Playfair Display', serif;
       font-size: 32px;
       font-weight: 700;
       margin-bottom: 20px;
-      text-align: left;
     }
-
     .featured.half-width {
       width: 50%;
       margin: 20px 0;
@@ -224,6 +231,14 @@
       text-align: left;
     }
 
+    .time-ago {
+      position: absolute;
+      bottom: 10px;
+      right: 10px;
+      color: #ccc;
+      font-size: 12px;
+    }
+
     footer {
       margin-top: 80px;
       padding: 20px 0;
@@ -232,13 +247,7 @@
       text-align: center;
       border-top: 1px solid #f0f0f0;
     }
-    .time-ago {
-      position: absolute;
-      bottom: 10px;
-      right: 10px;
-      color: #ccc;
-      font-size: 12px;
-    }
+
   </style>
 </head>
 <body>
@@ -268,12 +277,12 @@
   <a href="about.html">About</a>
 </nav>
 
-<!-- First Featured Post -->
+<!-- First Featured Post (centered text) -->
 <section class="featured">
   <a href="post1.html">
     <img src="images/Dune edit.jpg" alt="Makassar’s Spice Monopoly">
     <div class="overlay"></div>
-    <div class="text-overlay">
+    <div class="text-overlay center">
       <div class="issue">November Issue</div>
       <h2>Makassar’s Spice Monopoly: A Reanalysis of Seventeenth-Century Trade</h2>
       <div class="byline">
@@ -284,17 +293,22 @@
   </a>
 </section>
 
-<!-- James Bond Post -->
-<section class="featured half-width">
-  <a href="featurespost2.html">
-    <img src="images/Bondheadline.jpg" alt="James Bond Series">
-    <div class="overlay"></div>
-    <div class="text-overlay">
-      <div class="gold-title">James Bond Series</div>
-      <h2>Casino Royale: The Poyais Bluff</h2>
-      <div class="time-ago" id="bondTime"></div>
-    </div>
-  </a>
+<!-- Features Section -->
+<section class="features">
+  <h2 class="features-title">Features</h2>
+
+  <!-- James Bond Post -->
+  <div class="featured half-width">
+    <a href="featurespost2.html">
+      <img src="images/Bondheadline.jpg" alt="James Bond Series">
+      <div class="overlay"></div>
+      <div class="text-overlay">
+        <div class="gold-title">James Bond Series</div>
+        <h2>Casino Royale: The Poyais Bluff</h2>
+        <div class="time-ago" id="bondTime"></div>
+      </div>
+    </a>
+  </div>
 </section>
 
 <footer>
@@ -317,8 +331,8 @@
     });
   });
 
-  // Dynamic time ago for James Bond post
-  const bondPostTime = new Date("2025-12-06T10:00:00"); // replace with actual post time
+  // Dynamic "time ago" for James Bond post
+  const bondPostTime = new Date("2025-12-06T10:00:00"); // Replace with actual post time
   const bondTimeEl = document.getElementById("bondTime");
 
   function updateTimeAgo() {
@@ -342,7 +356,7 @@
   }
 
   updateTimeAgo();
-  setInterval(updateTimeAgo, 60000); // update every minute
+  setInterval(updateTimeAgo, 60000);
 </script>
 
 </body>
