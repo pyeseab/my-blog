@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>The Reboot — James Bond Series</title>
+  <title>The Reboot — Makassar’s Spice Monopoly</title>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Filosofia&display=swap" rel="stylesheet">
   <style>
@@ -52,7 +52,7 @@
       height: 100%;
       background: #fff;
       border-right: 1px solid #ddd;
-      padding-top: 100px;
+      padding-top: 80px; /* moved header a bit up */
       transform: translateX(-100%);
       transition: transform 0.4s ease;
       z-index: 1000;
@@ -104,7 +104,7 @@
 
     .site-header {
       text-align: center;
-      margin-top: 10px;
+      margin-top: 0px; /* moved header up */
       position: relative;
       transition: opacity 0.4s;
       z-index: 999;
@@ -126,18 +126,29 @@
 
     .post-content {
       max-width: 900px;
-      margin: 60px auto 40px auto;
+      margin: 100px auto 40px auto; /* moved content up */
       padding: 0 20px;
     }
 
-    img {
-      width: 100%;
-      height: auto;
-      display: block;
-      margin: 20px 0;
+    /* MAIN HEADLINE */
+    .post-content h1 {
+      font-family: Bodoni, serif;
+      font-size: 39px;
+      font-weight: 900;
+      margin-bottom: 10px;
+    }
+
+    /* SUBHEADLINE */
+    .post-content h2 {
+      font-family: 'Helvetica Neue', sans-serif;
+      font-weight: 500;
+      font-size: 23px;
+      margin-top: 15px;
+      margin-bottom: 25px;
     }
 
     .author-date {
+      text-align: left;
       font-family: 'Times New Roman', serif;
       font-size: 16px;
       color: #555;
@@ -150,48 +161,51 @@
       font-weight: normal;
     }
 
-    p {
+    .post-content p {
       margin-bottom: 21px;
       font-size: 19px;
     }
 
-    video {
-      width: 100%;
-      height: 500px;
-      margin: 40px 0;
-    }
-
-    /* Title spacing */
-    .post-title h2 {
-      margin: 0;
-      line-height: 1.1;
-      font-size: 76.5px; /* James Bond Series */
-      font-weight: 900;
-    }
-    .post-title h3 {
-      margin: 0;
-      line-height: 1.1;
-      font-size: 74.5px; /* Reduced by 2 sizes */
-      font-weight: 400; /* Not bold */
-    }
-
-    /* Credits section */
-    .credits {
+    blockquote {
+      font-family: 'Filosofia', serif;
+      font-size: 48px;
+      font-weight: bold;
+      margin: 60px 0;
       text-align: center;
-      margin-top: 60px;
-      margin-bottom: 60px;
+      line-height: 1;
     }
-    .credits h2 {
-      font-size: 58px; /* Reduced by 2 sizes */
+    blockquote .quote-source {
+      display: block;
+      font-family: 'Times New Roman', serif;
+      font-size: 22px;
+      font-weight: normal;
+      margin-top: 10px;
+      text-align: center;
+      color: #555;
+    }
+
+    h2.credits-title {
+      font-weight: bold;
+      text-align: center;
+      font-size: 28px;
+      margin-top: 90px;
       margin-bottom: 30px;
     }
-    .credits ol {
-      list-style-position: inside;
-      font-size: 19px;
-      padding-left: 0;
-      line-height: 1.8;
-      display: inline-block;
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin: 20px 0;
+    }
+
+    .caption {
+      font-family: 'Times New Roman', serif;
+      font-size: 14px;
+      color: #555;
       text-align: left;
+      margin-top: 2px;
+      margin-bottom: 20px;
     }
   </style>
 </head>
@@ -211,7 +225,7 @@
     <div class="menu-item">
       <span class="parent-item">James Bond Series</span>
       <div class="submenu">
-        <a href="featurespost2.html" class="indent">Casino Royale</a>
+        <a href="featurespost2.html" style="padding-left: 20px;">Casino Royale</a>
       </div>
     </div>
     <div class="menu-item">
@@ -226,26 +240,18 @@
   </div>
 
   <div class="post-content">
-    <div class="post-title">
-      <h2>James Bond Series</h2>
-      <h3>Casino Royale: The Poyais Bluff</h3>
-    </div>
+    <h1 style="margin-top:0;">James Bond Series<br><span style="font-weight:normal;">Casino Royale: The Poyais Bluff</span></h1>
 
     <div class="author-date">
       <p>BY Peter Yeseab</p>
       <p>December 9, 2025</p>
     </div>
 
-    <img src="images/Bondheadline.jpg" alt="Bond Headline Image">
+    <img src="images/Bondheadline.jpg" alt="James Bond Series" style="width:100%;">
 
     <p>Pack your bags for a beach bond-inspired adventure the whole family will love! Dive into turquoise waters, explore marine life, and soak up the vibrant coastal energy of Poyais. Whether you're chasing tax-free thrills or relaxing under palm trees, this settlement is your gateway to sun-soaked freedom. This was the decree of Gregor MacGregor in his manifesto published at the start of the 19th century. The local celebrity charmed British officials with the ease of a Bond villain at dinner tables, selling them on a colony that existed only in his mind. Hundreds of people staked their life fortunes to visit to only find the land acquired was of little prospect, with minimal infrastructure. The bonds collapsed, fewer than fifty of the 250 settlers ever returned to Britain. MacGregor was detained sometime in 1839, later resurfaced in Caracas—rewarded rather than ruined.</p>
 
     <p>In an uncanny global economic terror plot each settler, in retrospect, appears to have been seated at the baccarat table, convinced the cards were stacked in their favour. Meanwhile beside you sits Rothschild himself, the financier who managed the fortunes of Prince Charles of Hesse-Kassel and the King of Prussia on the London market. Quants—short for quantitative analysts—are the special type of nerds who have invaded our world of finance. The typical le chiffres would likely require a game theory approach to help explain the prisoner’s dilemma against such odds. But cards have landed and the Bank of England has declared the gilt-market liquidity has temporarily worsened. In a not-too-dissimilar scenario, heightened volatility of April 2025 echoed the speculative frenzy that drove the panic of 1825.</p>
-
-    <video controls>
-      <source src="videos/poyais_video.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
 
     <p>With Napoleon’s defeat investor confidence had surged and fuelled a boom. Public enthusiasm had reached near-mania levels, whilst domestic yields fell such that the British Treasury’s consols fell from 5% to 4% stock. This pushed investors to seek higher returns abroad in secure foreign bonds, exemplified by Rothschild’s £5 million Prussian issue. Enthusiasm extended to land speculation in Poyais, where prices soared as deposits secured future grants. Ultimately, Poyais bonds collapsed below their discounted price, along with the trend in Europe’s financial market.</p>
 
@@ -253,16 +259,12 @@
 
     <p>Have a merry Christmas and a happy New Year!</p>
 
-    <img src="images/bondsubheadline.png.jpg" alt="Bond Subheadline Image">
-
-    <div class="credits">
-      <h2>Credits</h2>
-      <ol>
-        <li>Gregg, R.T. (1999). Gregor MacGregor, Cazique of Poyais, 1786-1845 ... Or, Gregor MacGregor-- on the Trail of the Gullible! Twayne Publishers.</li>
-        <li>CFA Institute (2024). 2025 CFA Program Curriculum Level I Box Set. John Wiley & Sons.</li>
-        <li>Christoph Lindner (2009). Revisioning 007 : James Bond and Casino Royale. London: Wallflower.</li>
-      </ol>
-    </div>
+    <h2 class="credits-title">CREDITS</h2>
+    <ol>
+      <li>Gregg, R.T. (1999). Gregor MacGregor, Cazique of Poyais, 1786-1845 ... Or, Gregor MacGregor-- on the Trail of the Gullible! Twayne Publishers.</li>
+      <li>CFA Institute (2024). 2025 CFA Program Curriculum Level I Box Set. John Wiley & Sons.</li>
+      <li>Christoph Lindner (2009). Revisioning 007 : James Bond and Casino Royale. London: Wallflower.</li>
+    </ol>
 
   </div>
 
@@ -270,13 +272,11 @@
     const menuToggle = document.getElementById('menuToggle');
     const navMenu = document.getElementById('navMenu');
     const parentItems = document.querySelectorAll('.parent-item');
-    const siteHeader = document.getElementById('siteHeader');
 
     menuToggle.addEventListener('click', () => {
       menuToggle.classList.toggle('open');
       navMenu.classList.toggle('open');
     });
-
     parentItems.forEach(item => {
       item.addEventListener('click', () => {
         item.parentElement.classList.toggle('open');
@@ -285,6 +285,7 @@
 
     window.addEventListener('scroll', () => {
       const scrollPos = window.scrollY;
+      const siteHeader = document.getElementById('siteHeader');
       siteHeader.style.opacity = scrollPos < 150 ? 1 - scrollPos / 150 : 0;
     });
   </script>
