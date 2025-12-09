@@ -126,7 +126,7 @@
 
     .post-content {
       max-width: 900px;
-      margin: 80px auto 40px auto;
+      margin: 60px auto 40px auto;
       padding: 0 20px;
     }
 
@@ -160,6 +160,28 @@
       height: 500px;
       margin: 40px 0;
     }
+
+    /* Title spacing */
+    .post-title h2, .post-title h3 {
+      margin: 0;
+      line-height: 1.1;
+      font-size: 76.5px;
+    }
+
+    /* Credits section */
+    .credits {
+      text-align: center;
+      margin-top: 60px;
+      margin-bottom: 60px;
+    }
+    .credits ol {
+      list-style-position: inside;
+      font-size: 19px;
+      padding-left: 0;
+      line-height: 1.8;
+      display: inline-block;
+      text-align: left;
+    }
   </style>
 </head>
 <body>
@@ -192,10 +214,11 @@
     <hr>
   </div>
 
-  <div class="post-content feature-section">
-    <h1 style="font-size: 76.5px;">Features</h1>
-    <h2 style="font-size: 76.5px;">James Bond Series</h2>
-    <h3 style="font-size: 76.5px;">Casino Royale: The Poyais Bluff</h3>
+  <div class="post-content">
+    <div class="post-title">
+      <h2>James Bond Series</h2>
+      <h3>Casino Royale: The Poyais Bluff</h3>
+    </div>
 
     <div class="author-date">
       <p>BY Peter Yeseab</p>
@@ -220,6 +243,16 @@
     <p>Have a merry Christmas and a happy New Year!</p>
 
     <img src="images/bondsubheadline.png.jpg" alt="Bond Subheadline Image">
+
+    <div class="credits">
+      <h2>Credits</h2>
+      <ol>
+        <li>Gregg, R.T. (1999). Gregor MacGregor, Cazique of Poyais, 1786-1845 ... Or, Gregor MacGregor-- on the Trail of the Gullible! Twayne Publishers.</li>
+        <li>CFA Institute (2024). 2025 CFA Program Curriculum Level I Box Set. John Wiley & Sons.</li>
+        <li>Christoph Lindner (2009). Revisioning 007 : James Bond and Casino Royale. London: Wallflower.</li>
+      </ol>
+    </div>
+
   </div>
 
   <script>
