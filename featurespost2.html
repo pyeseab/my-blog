@@ -17,54 +17,60 @@
 
     .post-content {
       max-width: 900px;
-      margin: 100px auto 40px auto;
+      margin: 120px auto 40px auto;
       padding: 0 20px;
     }
 
-    .featured-image {
-      width: 100%;
-      max-height: 500px;
-      object-fit: cover;
-      box-shadow: inset 0 -100px 100px -20px rgba(0,0,0,0.6);
-      margin-bottom: 30px;
-    }
-
-    .title-small {
-      font-size: 14px;
-      color: gold;
-      margin-bottom: 5px;
-      display: block;
-      font-family: 'Times New Roman', serif;
-    }
-
-    .main-title {
+    /* Title styling */
+    .title-main {
       font-family: 'Playfair Display', serif;
-      font-size: 32px;
-      font-weight: 700;
-      margin: 0 0 20px 0;
+      font-size: 39px;
+      font-weight: 900;
+      margin-bottom: 10px;
+      color: black;
+    }
+
+    .title-sub {
+      font-family: 'Playfair Display', serif;
+      font-size: 39px;
+      font-weight: 900;
+      margin-bottom: 20px;
+      color: black;
     }
 
     .author-date {
       font-size: 16px;
       color: #555;
-      margin-bottom: 30px;
+      margin-bottom: 25px;
     }
 
     .author-date p {
       margin: 2px 0;
     }
 
+    /* Featured image */
+    .featured-image {
+      width: 100%;
+      max-height: 450px;
+      object-fit: cover;
+      box-shadow: inset 0 -100px 100px -20px rgba(0,0,0,0.6);
+      margin-bottom: 30px;
+    }
+
+    /* Paragraphs */
     p {
       margin-bottom: 21px;
     }
 
+    /* Video styling */
     video {
       display: block;
       width: 100%;
       max-height: 500px;
-      margin: 30px 0;
+      margin: 40px 0;
     }
 
+    /* Sub image */
     img.sub-image {
       width: 100%;
       margin-top: 30px;
@@ -76,8 +82,8 @@
   <div class="post-content">
     <img src="images/Bondheadline.jpg" alt="James Bond Series" class="featured-image">
 
-    <span class="title-small">James Bond Series:</span>
-    <h1 class="main-title">Casino Royale: The Poyais Bluff</h1>
+    <h1 class="title-main">James Bond Series</h1>
+    <h2 class="title-sub">Casino Royale: The Poyais Bluff</h2>
 
     <div class="author-date">
       <p>BY PETER YESEAB</p>
