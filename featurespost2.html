@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>The Reboot — James Bond Series: Casino Royale</title>
+  <title>The Reboot — James Bond Series</title>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Filosofia&display=swap" rel="stylesheet">
   <style>
@@ -15,7 +15,6 @@
       margin: 0;
     }
 
-    /* Hamburger menu */
     .menu-icon {
       position: fixed;
       left: 20px;
@@ -57,12 +56,8 @@
       transition: transform 0.4s ease;
       z-index: 1000;
     }
-    nav.open {
-      transform: translateX(0);
-    }
-    .menu-item {
-      margin: 20px 0;
-    }
+    nav.open { transform: translateX(0); }
+    .menu-item { margin: 20px 0; }
     .parent-item {
       font-family: 'Times New Roman', serif;
       font-weight: 400;
@@ -71,98 +66,50 @@
       padding-left: 30px;
       display: block;
     }
-    .submenu {
-      display: flex;
-      flex-direction: column;
-      margin-left: 40px;
-      max-height: 0;
-      overflow: hidden;
-      transition: 0.3s ease;
+    .submenu { 
+      display: flex; 
+      flex-direction: column; 
+      margin-left: 40px; 
+      max-height: 0; 
+      overflow: hidden; 
+      transition: 0.3s ease; 
       opacity: 0;
     }
-    .menu-item.open .submenu {
-      max-height: 200px;
-      opacity: 1;
-    }
-    .submenu a {
-      font-family: 'Times New Roman', serif;
-      font-weight: 300;
-      font-size: 21px;
-      color: #000;
-      text-decoration: none;
-      margin: 5px 0;
-      padding-left: 10px;
-    }
-    .submenu a:hover {
-      text-decoration: underline;
-    }
-    .menu-item a.home-link {
-      padding-left: 30px;
-      text-decoration: none;
-      font-weight: 400;
+    .menu-item.open .submenu { max-height: 200px; opacity: 1; }
+    .submenu a { font-family: 'Times New Roman', serif; font-weight: 300; font-size: 21px; color: #000; text-decoration: none; margin: 5px 0; padding-left: 10px; }
+    .submenu a:hover { text-decoration: underline; }
+    .menu-item a.home-link { padding-left: 30px; text-decoration: none; font-weight: 400; }
+
+    .site-header { text-align: center; margin-top: 10px; position: relative; transition: opacity 0.4s; z-index: 999; }
+    .site-header h1 { font-family: 'Playfair Display', serif; font-weight: 900; font-size: 27px; margin: 10px 0; display: inline-block; padding: 0 10px; }
+    .site-header hr { border: none; border-top: 1px solid #0f172a; width: 80%; margin: 0 auto; }
+
+    .post-content { max-width: 900px; margin: 120px auto 40px auto; padding: 0 20px; }
+
+    .post-content h1 { font-family: 'Playfair Display', serif; font-size: 36px; font-weight: 900; margin-bottom: 15px; }
+    .author-date { text-align: left; font-family: 'Times New Roman', serif; font-size: 16px; color: #555; line-height: 1.2; margin-bottom: 25px; }
+    .author-date p { margin: 2px 0; font-size: 16px; font-weight: normal; }
+
+    .post-content img {
+      width: 100%;
+      height: auto;
+      display: block;
+      margin: 20px 0;
     }
 
-    .site-header {
-      text-align: center;
-      margin-top: 10px;
-      position: relative;
-      transition: opacity 0.4s;
-      z-index: 999;
-    }
-    .site-header h1 {
-      font-family: 'Playfair Display', serif;
-      font-weight: 900;
-      font-size: 27px;
-      margin: 10px 0;
-      display: inline-block;
-      padding: 0 10px;
-    }
-    .site-header hr {
-      border: none;
-      border-top: 1px solid #0f172a;
-      width: 80%;
-      margin: 0 auto;
-    }
-
-    .post-content {
-      max-width: 900px;
-      margin: 120px auto 40px auto;
-      padding: 0 20px;
-    }
-
-    .post-content h1 {
-      font-family: Bodoni, serif;
-      font-size: 39px;
-      font-weight: 900;
-      margin-bottom: 10px;
-    }
-
-    .post-content h2 {
-      font-family: 'Helvetica Neue', sans-serif;
-      font-weight: 500;
-      font-size: 23px;
-      margin-top: 15px;
-      margin-bottom: 25px;
-    }
-
-    .author-date {
-      text-align: left;
-      font-family: 'Times New Roman', serif;
-      font-size: 16px;
-      color: #555;
-      line-height: 1.2;
-      margin-bottom: 25px;
-    }
-    .author-date p {
-      margin: 2px 0;
-      font-size: 16px;
-      font-weight: normal;
+    .post-content video {
+      display: block;
+      width: 100%;
+      max-width: 100%;
+      margin: 50px 0; /* large space above and below */
     }
 
     .post-content p {
       margin-bottom: 21px;
       font-size: 19px;
     }
+
+    .caption { font-family: 'Times New Roman', serif; font-size: 14px; color: #555; text-align: left; margin-top: 2px; margin-bottom: 20px; }
 
     blockquote {
       font-family: 'Filosofia', serif;
@@ -172,39 +119,9 @@
       text-align: center;
       line-height: 1;
     }
-    blockquote .quote-source {
-      display: block;
-      font-family: 'Times New Roman', serif;
-      font-size: 22px;
-      font-weight: normal;
-      margin-top: 10px;
-      text-align: center;
-      color: #555;
-    }
+    blockquote .quote-source { display: block; font-family: 'Times New Roman', serif; font-size: 22px; font-weight: normal; margin-top: 10px; text-align: center; color: #555; }
 
-    h2.credits-title {
-      font-weight: bold;
-      text-align: center;
-      font-size: 28px;
-      margin-top: 90px;
-      margin-bottom: 30px;
-    }
-
-    img, video {
-      max-width: 100%;
-      height: auto;
-      display: block;
-      margin: 20px 0;
-    }
-
-    .caption {
-      font-family: 'Times New Roman', serif;
-      font-size: 14px;
-      color: #555;
-      text-align: left;
-      margin-top: 2px;
-      margin-bottom: 20px;
-    }
+    h2.credits-title { font-weight: bold; text-align: center; font-size: 28px; margin-top: 90px; margin-bottom: 30px; }
   </style>
 </head>
 <body>
@@ -241,8 +158,8 @@
     <h1>James Bond Series: Casino Royale: The Poyais Bluff</h1>
 
     <div class="author-date">
-      <p>BY [Your Name]</p>
-      <p>[Date]</p>
+      <p>BY PETER YESEAB</p>
+      <p>December 9, 2025</p>
     </div>
 
     <img src="images/Bondheadline.jpg" alt="James Bond Series: Casino Royale">
@@ -251,9 +168,9 @@
 
     <p>In an uncanny global economic terror plot each settler, in retrospect, appears to have been seated at the baccarat table, convinced the cards were stacked in their favour. Meanwhile beside you sits Rothschild himself, the financier who managed the fortunes of Prince Charles of Hesse-Kassel and the King of Prussia on the London market. Quants—short for quantitative analysts—are the special type of nerds who have invaded our world of finance. The typical le chiffres would likely require a game theory approach to help explain the prisoner’s dilemma against such odds. But cards have landed and the Bank of England has declared the gilt-market liquidity has temporarily worsened.</p>
 
-    <!-- Video insertion -->
+    <!-- Video -->
     <video controls>
-      <source src="videos/poyais_video.mp4.mov" type="video/mp4">
+      <source src="video/poyais_video.mp4.mov" type="video/mp4">
       Your browser does not support the video tag.
     </video>
 
@@ -261,15 +178,14 @@
 
     <p>Bond walks up to a bar at the lavish Montenegro hotel to order a vodka martini-shaken not stirred as per audience’s expectation for the big screen spy hero but growls, “I just don’t give a damn”. in Victorian England, MacGregor became a symbol of human folly celebrated in poems like the Ingoldsby legends by Thomas Harris. He demonstrates the audacity and delusion that can drive people to gamble everything on a dream.</p>
 
-    <img src="images/bondsubheadline.png.jpg" alt="Bond Subheadline Image">
-
-    <p>Have a merry Christmas and a happy New Year!</p>
+    <img src="images/bondsubheadline.png.jpg" alt="Subheadline Image">
   </div>
 
   <script>
     const menuToggle = document.getElementById('menuToggle');
     const navMenu = document.getElementById('navMenu');
     const parentItems = document.querySelectorAll('.parent-item');
+    const siteHeader = document.getElementById('siteHeader');
 
     menuToggle.addEventListener('click', () => {
       menuToggle.classList.toggle('open');
@@ -281,7 +197,11 @@
         item.parentElement.classList.toggle('open');
       });
     });
-  </script>
 
+    window.addEventListener('scroll', () => {
+      const scrollPos = window.scrollY;
+      siteHeader.style.opacity = scrollPos < 150 ? 1 - scrollPos / 150 : 0;
+    });
+  </script>
 </body>
 </html>
