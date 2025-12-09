@@ -303,23 +303,27 @@
   </div>
 
   <script>
-    const menuToggle = document.getElementById('menuToggle');
-    const navMenu = document.getElementById('navMenu');
-    const parentItem = document.querySelector('.parent-item');
-    const siteHeader = document.getElementById('siteHeader');
+const menuToggle = document.getElementById('menuToggle');
+const navMenu = document.getElementById('navMenu');
+const parentItems = document.querySelectorAll('.parent-item');
 
-    menuToggle.addEventListener('click', () => {
-      menuToggle.classList.toggle('open');
-      navMenu.classList.toggle('open');
-    });
-    parentItem.addEventListener('click', () => {
-      parentItem.parentElement.classList.toggle('open');
-    });
+menuToggle.addEventListener('click', () => {
+  menuToggle.classList.toggle('open');
+  navMenu.classList.toggle('open');
+});
 
-    window.addEventListener('scroll', () => {
-      const scrollPos = window.scrollY;
-      siteHeader.style.opacity = scrollPos < 150 ? 1 - scrollPos / 150 : 0;
-    });
+parentItems.forEach(item => {
+  item.addEventListener('click', () => {
+    console.log('Clicked:', item.textContent);
+    item.parentElement.classList.toggle('open');
+  });
+});
+
+window.addEventListener('scroll', () => {
+  const scrollPos = window.scrollY;
+  const siteHeader = document.getElementById('siteHeader');
+  siteHeader.style.opacity = scrollPos < 150 ? 1 - scrollPos / 150 : 0;
+});
   </script>
 
 </body>
