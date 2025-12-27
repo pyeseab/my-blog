@@ -212,9 +212,12 @@
   width: 90%;
   max-width: 900px;
   margin: 60px auto;
-  display: flex;          
-  flex-wrap: wrap;        
-  gap: 20px;              
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: flex-start; 
+  align-items: flex-start;     
+  text-align: left;            
 }
 
     .features-title {
@@ -224,9 +227,11 @@
       margin-bottom: 20px;
     }
     .featured.half-width {
-  width: calc(50% - 10px); 
+  width: calc(50% - 10px);
   position: relative;
+  text-align: left; 
 }
+
     .gold-title {
       font-size: 14px;
       color: gold;
