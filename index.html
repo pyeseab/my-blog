@@ -4,7 +4,9 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>The Reboot — Home</title>
+
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&display=swap" rel="stylesheet">
+
   <style>
     body {
       margin: 0;
@@ -14,7 +16,7 @@
       overflow-x: hidden;
     }
 
-    /* Header */
+    /* ================= HEADER ================= */
     header {
       position: relative;
       display: flex;
@@ -30,7 +32,7 @@
       text-align: center;
     }
 
-    /* Hamburger icon */
+    /* ================= MENU ICON ================= */
     .menu-icon {
       position: absolute;
       left: 20px;
@@ -43,85 +45,78 @@
       flex-direction: column;
       justify-content: space-between;
     }
+
     .menu-icon div {
       height: 4px;
       background-color: #0f172a;
       border-radius: 2px;
       transition: all 0.3s ease;
     }
+
     .menu-icon.open div:nth-child(1) {
       transform: rotate(45deg) translateY(9px);
     }
+
     .menu-icon.open div:nth-child(2) {
       opacity: 0;
     }
+
     .menu-icon.open div:nth-child(3) {
       transform: rotate(-45deg) translateY(-9px);
     }
 
-    /* Left slide-in navigation */
+    /* ================= NAV ================= */
     nav {
       position: fixed;
       top: 0;
       left: 0;
       width: 260px;
       height: 100%;
-      background-color: #fff;
+      background: #fff;
       border-right: 1px solid #ddd;
       padding-top: 100px;
       transform: translateX(-100%);
       transition: transform 0.4s ease;
       z-index: 1000;
-      text-align: left;
     }
+
     nav.open {
       transform: translateX(0);
     }
 
-    /* Menu items */
     .menu-item {
       margin: 20px 0;
       padding-left: 30px;
     }
+
     .parent-item {
       font-size: 20px;
       font-family: 'Times New Roman', serif;
       font-weight: bold;
       cursor: pointer;
-      display: block;
     }
 
     .submenu {
-      display: flex;
-      flex-direction: column;
       margin-top: 10px;
       margin-left: 10px;
-      transform: translateX(-20px);
-      opacity: 0;
       max-height: 0;
       overflow: hidden;
-      transition: transform 0.3s ease, opacity 0.3s ease, max-height 0.3s ease;
+      opacity: 0;
+      transition: all 0.3s ease;
     }
 
     .menu-item.open .submenu {
+      max-height: 300px;
       opacity: 1;
-      transform: translateX(0);
-      max-height: 400px;
     }
 
     .submenu a {
+      display: block;
+      font-size: 18px;
       font-family: 'Times New Roman', serif;
-      font-weight: 300;
       color: #000;
       text-decoration: none;
-      font-size: 18px;
-      display: block;
-      padding-left: 10px;
-      margin: 5px 0;
-    }
-
-    .submenu a.indent {
-      padding-left: 20px;
+      margin: 6px 0;
     }
 
     .submenu a:hover {
@@ -129,20 +124,16 @@
     }
 
     nav a:not(.submenu a) {
+      display: block;
       font-size: 20px;
-      color: #000;
-      text-decoration: none;
-      margin: 20px 0;
       font-family: 'Times New Roman', serif;
       font-weight: bold;
-      padding-left: 30px;
-      display: block;
-    }
-    nav a:not(.submenu a):hover {
-      text-decoration: underline;
+      text-decoration: none;
+      color: #000;
+      margin: 20px 0;
     }
 
-    /* Featured image section */
+    /* ================= HERO POST ================= */
     .featured {
       position: relative;
       width: 90%;
@@ -150,48 +141,45 @@
       margin: 60px auto;
       overflow: hidden;
     }
- 
+
     .featured img {
       width: 100%;
       height: auto;
       display: block;
-      border-radius: 0;
       object-fit: cover;
     }
 
     .overlay {
       position: absolute;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      height: 100%;
-      background: linear-gradient(to top, rgba(0,0,0,1) 0%, rgba(0,0,0,0.6) 40%, rgba(0,0,0,0.1) 80%);
-      border-radius: 0;
+      inset: 0;
+      background: linear-gradient(
+        to top,
+        rgba(0,0,0,1) 0%,
+        rgba(0,0,0,0.6) 40%,
+        rgba(0,0,0,0.1) 80%
+      );
     }
 
     .text-overlay {
-  position: absolute;
-  bottom: 40px;
-  left: 20px;
-  transform: none;
-  color: #ffffff;
-  width: calc(100% - 40px);
-}
+      position: absolute;
+      bottom: 40px;
+      left: 20px;
+      width: calc(100% - 40px);
+      color: #fff;
+    }
 
-
-    /* Centered text for first post */
-  .text-overlay.center {
-  left: 50%;
-  transform: translateX(-50%);
-  text-align: center;
-}
+    .text-overlay.center {
+      left: 50%;
+      transform: translateX(-50%);
+      text-align: center;
+    }
 
     .issue {
       font-size: 14px;
-      letter-spacing: 1px;
       text-transform: uppercase;
       color: #ddd;
       margin-bottom: 8px;
+      letter-spacing: 1px;
     }
 
     .text-overlay h2 {
@@ -199,76 +187,72 @@
       font-weight: 700;
       margin: 0;
     }
-    .text-overlay h2:hover {
-      color: #ffffff;
-      text-decoration: underline;
-    }
 
     .byline {
       font-size: 15px;
       color: #ccc;
       margin-top: 10px;
-      line-height: 1.4;
     }
 
-    /* Features Section */
-   .features {
-  width: 90%;
-  max-width: 900px;
-  margin: 60px auto;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: flex-start; 
-  align-items: flex-start;     
-  text-align: left;            
-}
-
+    /* ================= FEATURES ================= */
     .features-title {
-      font-family: 'Playfair Display', serif;
+      width: 90%;
+      max-width: 900px;
+      margin: 60px auto 20px auto;
       font-size: 32px;
       font-weight: 700;
-      margin-bottom: 20px;
     }
+
+    .features {
+      width: 90%;
+      max-width: 900px;
+      margin: 0 auto 60px auto;
+      display: flex;
+      gap: 20px;
+      align-items: flex-start;
+    }
+
     .featured.half-width {
-  width: calc(50% - 10px);
-  position: relative;
-  text-align: left; 
-}
+      width: calc(50% - 10px);
+      position: relative;
+    }
+
+    /* SAME SIZE FEATURE IMAGES */
+    .featured.half-width img {
+      height: 320px;
+      object-fit: cover;
+    }
 
     .gold-title {
       font-size: 14px;
       color: gold;
       margin-bottom: 5px;
-      text-align: left;
     }
 
     .time-ago {
       position: absolute;
       bottom: 10px;
       right: 10px;
-      color: #ccc;
       font-size: 12px;
+      color: #ccc;
     }
 
     footer {
       margin-top: 80px;
-      padding: 20px 0;
+      padding: 20px;
+      text-align: center;
       font-size: 14px;
       color: #777;
-      text-align: center;
-      border-top: 1px solid #f0f0f0;
+      border-top: 1px solid #eee;
     }
-
   </style>
 </head>
+
 <body>
 
 <header>
   <div class="menu-icon" id="menuToggle">
-    <div></div>
-    <div></div>
-    <div></div>
+    <div></div><div></div><div></div>
   </div>
   <h1>The Reboot</h1>
 </header>
@@ -280,41 +264,38 @@
       <a href="dune.html">DUNE</a>
       <a href="terminator.html">Terminator</a>
     </div>
-    </div>
   </div>
+
   <div class="menu-item">
     <span class="parent-item">James Bond Series</span>
     <div class="submenu">
-     <a href="jamesbondseries.html">Casino Royale</a>
+      <a href="jamesbondseries.html">Casino Royale</a>
     </div>
   </div>
+
   <a href="about.html">About</a>
 </nav>
 
-<!-- First Featured Post (centered text) -->
+<!-- HERO POST -->
 <section class="featured">
   <a href="dune.html">
-    <img src="images/Dune edit.jpg" alt="Makassar’s Spice Monopoly">
+    <img src="images/Dune edit.jpg" alt="">
     <div class="overlay"></div>
     <div class="text-overlay center">
       <div class="issue">November Issue</div>
       <h2>Makassar’s Spice Monopoly: A Reanalysis of Seventeenth-Century Trade</h2>
-      <div class="byline">
-        By Peter Yeseab<br>
-        8 November 2025
-      </div>
+      <div class="byline">By Peter Yeseab · 8 November 2025</div>
     </div>
   </a>
 </section>
 
-<!-- Features Section -->
-<section class="features">
-  <h2 class="features-title">Features</h2>
+<!-- FEATURES -->
+<h2 class="features-title">Features</h2>
 
-  <!-- James Bond Post -->
+<section class="features">
   <div class="featured half-width">
     <a href="jamesbondseries.html">
-      <img src="images/Bondheadline.jpg" alt="James Bond Series">
+      <img src="images/Bondheadline.jpg" alt="">
       <div class="overlay"></div>
       <div class="text-overlay">
         <div class="gold-title">James Bond Series</div>
@@ -324,10 +305,9 @@
     </a>
   </div>
 
-  <!-- Terminator Post -->
   <div class="featured half-width">
     <a href="terminator.html">
-      <img src="images/Terminator.jpg" alt="Terminator and AI">
+      <img src="images/Terminator.jpg" alt="">
       <div class="overlay"></div>
       <div class="text-overlay">
         <h2>Long Read: What Can Terminator Teach Us About AI?</h2>
@@ -356,28 +336,18 @@
     });
   });
 
-  // Dynamic "time ago" for James Bond post
-  const bondPostTime = new Date("2025-12-06T10:00:00"); // Replace with actual post time
+  const bondPostTime = new Date("2025-12-06T10:00:00");
   const bondTimeEl = document.getElementById("bondTime");
 
   function updateTimeAgo() {
     const now = new Date();
     const diff = now - bondPostTime;
-    const seconds = Math.floor(diff / 1000);
-    const minutes = Math.floor(seconds / 60);
-    const hours = Math.floor(minutes / 60);
+    const hours = Math.floor(diff / 3600000);
     const days = Math.floor(hours / 24);
-    const weeks = Math.floor(days / 7);
-    const months = Math.floor(days / 30);
-
-    let display = "";
-    if (hours < 24) display = hours + "h ago";
-    else if (days < 7) display = days + "d ago";
-    else if (weeks < 4) display = weeks + "w ago";
-    else if (months < 3) display = months + "mo ago";
-    else display = bondPostTime.toLocaleDateString();
-
-    bondTimeEl.textContent = display;
+    bondTimeEl.textContent =
+      hours < 24 ? `${hours}h ago` :
+      days < 7 ? `${days}d ago` :
+      bondPostTime.toLocaleDateString();
   }
 
   updateTimeAgo();
