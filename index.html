@@ -150,6 +150,11 @@
       margin: 60px auto;
       overflow: hidden;
     }
+    .features-title {
+  width: 90%;
+  max-width: 900px;
+  margin: 60px auto 20px auto;
+}
     .featured img {
       width: 100%;
       height: auto;
@@ -169,18 +174,21 @@
     }
 
     .text-overlay {
-      position: absolute;
-      bottom: 40px;
-      left: 50%;
-      transform: translateX(-50%);
-      color: #ffffff;
-      width: 90%;
-    }
+  position: absolute;
+  bottom: 40px;
+  left: 20px;
+  transform: none;
+  color: #ffffff;
+  width: calc(100% - 40px);
+}
+
 
     /* Centered text for first post */
-    .text-overlay.center {
-      text-align: center;
-    }
+  .text-overlay.center {
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+}
 
     .issue {
       font-size: 14px;
