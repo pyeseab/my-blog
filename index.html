@@ -208,12 +208,15 @@
     }
 
     /* Features Section */
-    .features {
-      width: 90%;
-      max-width: 900px;
-      margin: 60px auto;
-      text-align: left;
-    }
+   .features {
+  width: 90%;
+  max-width: 900px;
+  margin: 60px auto;
+  display: flex;          
+  flex-wrap: wrap;        
+  gap: 20px;              
+}
+
     .features-title {
       font-family: 'Playfair Display', serif;
       font-size: 32px;
@@ -221,9 +224,9 @@
       margin-bottom: 20px;
     }
     .featured.half-width {
-      width: 50%;
-      margin: 20px 0;
-    }
+  width: calc(50% - 10px); 
+  position: relative;
+}
     .gold-title {
       font-size: 14px;
       color: gold;
@@ -316,6 +319,7 @@
   <div class="featured half-width">
     <a href="terminator.html">
       <img src="images/Terminator.jpg" alt="Terminator and AI">
+      <div class="overlay"></div>
       <div class="text-overlay">
         <h2>Long Read: What Can Terminator Teach Us About AI?</h2>
       </div>
