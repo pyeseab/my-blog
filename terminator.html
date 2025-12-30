@@ -15,11 +15,11 @@
       margin: 0;
     }
 
-    /* Hamburger menu */
+    /* ================= MENU ICON ================= */
     .menu-icon {
       position: fixed;
       left: 20px;
-      top: 20px;
+      top: 25px;
       cursor: pointer;
       z-index: 1001;
       width: 28px;
@@ -28,22 +28,27 @@
       flex-direction: column;
       justify-content: space-between;
     }
+
     .menu-icon div {
       height: 4px;
       background-color: #0f172a;
       border-radius: 2px;
       transition: all 0.3s ease;
     }
+
     .menu-icon.open div:nth-child(1) {
       transform: rotate(45deg) translateY(9px);
     }
+
     .menu-icon.open div:nth-child(2) {
       opacity: 0;
     }
+
     .menu-icon.open div:nth-child(3) {
       transform: rotate(-45deg) translateY(-9px);
     }
 
+    /* ================= NAV ================= */
     nav {
       position: fixed;
       top: 0;
@@ -57,50 +62,67 @@
       transition: transform 0.4s ease;
       z-index: 1000;
     }
+
     nav.open {
       transform: translateX(0);
     }
+
     .menu-item {
       margin: 20px 0;
     }
+
     .parent-item {
-      font-family: 'Times New Roman', serif;
-      font-weight: 400;
-      font-size: 22px;
-      cursor: pointer;
-      padding-left: 30px;
-      display: block;
-    }
-    .submenu {
-      display: flex;
-      flex-direction: column;
-      margin-left: 40px;
-      max-height: 0;
-      overflow: hidden;
-      transition: 0.3s ease;
-      opacity: 0;
-    }
-    .menu-item.open .submenu {
-      max-height: 200px;
-      opacity: 1;
-    }
-    .submenu a {
-      font-family: 'Times New Roman', serif;
-      font-weight: 300;
-      font-size: 21px;
-      color: #000;
-      text-decoration: none;
-      margin: 5px 0;
-      padding-left: 10px;
-    }
+  font-family: 'Times New Roman', serif;
+  font-weight: 400;
+  font-size: 22px;
+  cursor: pointer;
+  padding-left: 30px;
+  display: block;
+}
+
+    
+.submenu {
+  display: flex;
+  flex-direction: column;
+  margin-left: 40px;
+  max-height: 0;
+  overflow: hidden;
+  transition: 0.3s ease;
+  opacity: 0;
+}
+
+  .menu-item.open .submenu {
+  max-height: 200px;
+  opacity: 1;
+}
+
+ .submenu a {
+  font-family: 'Times New Roman', serif;
+  font-weight: 300;
+  font-size: 21px;
+  color: #000;
+  text-decoration: none;
+  margin: 5px 0;
+  padding-left: 10px;
+}
+
     .submenu a:hover {
       text-decoration: underline;
     }
-    .menu-item a.home-link {
-      padding-left: 30px;
-      text-decoration: none;
-      font-weight: 400;
-    }
+
+   .single-link {
+  display: block;
+  padding-left: 30px;
+  font-family: 'Times New Roman', serif;
+  font-size: 22px;
+  font-weight: 400;
+  text-decoration: none;
+  color: #000;
+}
+
+.single-link:hover {
+  text-decoration: underline;
+}
 
     .site-header {
       text-align: center;
@@ -223,29 +245,29 @@
     <div></div><div></div><div></div>
   </div>
 
-  <nav id="navMenu">
-    <!-- SCIFI -->
-    <div class="menu-item">
-      <span class="parent-item">SciFi</span>
-      <div class="submenu">
-        <a href="dune.html">DUNE</a>
-        <a href="terminator.html">Terminator</a>
-      </div>
+  
+<nav id="navMenu">
+  <div class="menu-item">
+    <span class="parent-item">SciFi</span>
+    <div class="submenu">
+      <a href="dune.html">DUNE</a>
+      <a href="terminator.html">Terminator</a>
     </div>
+  </div>
 
-    <!-- JAMES BOND SERIES -->
-    <div class="menu-item">
-      <span class="parent-item">James Bond Series</span>
-      <div class="submenu">
-        <a href="jamesbondseries.html">Casino Royale</a>
-      </div>
+  <div class="menu-item">
+    <span class="parent-item">James Bond Series</span>
+    <div class="submenu">
+      <a href="jamesbondseries.html">Casino Royale</a>
     </div>
-
-    <!-- HOME -->
-    <div class="menu-item">
-      <a href="index.html" class="home-link">Home</a>
-    </div>
-  </nav>
+  </div>
+<div class="menu-item">
+  <a href="about.html" class="single-link">About</a>
+  </div>
+  <div class="menu-item">
+    <a href="index.html" class="single-link">Home</a>
+</div>
+</nav>
 
   <div class="site-header" id="siteHeader">
     <hr>
@@ -275,13 +297,9 @@
     <p>In 2020, YITU secured 2.567 billion CNY in financing, even while carrying an accumulated loss of 7.2 billion CNY. Outside of funding rounds, superintelligence can still reach a cognitive red light. In the same year, IBM, Amazon, and Microsoft halted sales of facial recognition technology to police following warnings from human rights groups over racial discrimination. Persistent gender bias in AI and STEM continues to influence how systems are designed, often sidelining women’s contributions and increasing the risk of job displacement. The ecological cost is also quite prevalent as training a single large model like GPT-3 can emit up to 500 metric tons of carbon dioxide (CO2). Whilst AI seems to be blamed for a rise in thousands of lay-offs.</p>
 
     <p>So, what technological paranoia are you feeling today? James Cameron wanted to explore how humans can become inhuman—but AI can feel a lot like a red flag...with no hydraulic press machine in sight.</p>
-  
-      <div class="post-content">
-    <!-- existing article content ends here -->
 
     <h2 class="credits-title">CREDITS</h2>
     <ol>
-      <ol>
       <li>Valls, A. and Gibert, K. (2022). Women in Artificial Intelligence. Applied Sciences, 12(19), p.9639. doi:https://doi.org/10.3390/app12199639.</li>
       <li>Whittaker, N. (2000). The Terminator. York Notes.</li>
       <li>Nathan, I. and Schwarzenegger, A. (2013). Terminator vault : the complete story behind the making of the Terminator and Terminator 2: Judgment day. London: Aurum.</li>
