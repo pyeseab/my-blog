@@ -34,7 +34,7 @@
 
     /* ================= MENU ICON ================= */
     .menu-icon {
-      position: absolute;
+      position: fixed;
       left: 20px;
       top: 25px;
       cursor: pointer;
@@ -74,7 +74,7 @@
       height: 100%;
       background: #fff;
       border-right: 1px solid #ddd;
-      padding-top: 100px;
+      padding-top: 80px;
       transform: translateX(-100%);
       transition: transform 0.4s ease;
       z-index: 1000;
@@ -86,23 +86,23 @@
 
     .menu-item {
       margin: 20px 0;
-      padding-left: 30px;
     }
 
     .parent-item {
-      font-size: 20px;
+      padding-left: 30px;
+      font-size: 22px;
       font-family: 'Times New Roman', serif;
-      font-weight: bold;
+      font-weight: 400;
       cursor: pointer;
     }
 
     .submenu {
       margin-top: 10px;
-      margin-left: 10px;
-      max-height: 0;
+      margin-left: 40px;
+      max-height: 200px;
       overflow: hidden;
       opacity: 0;
-      transition: all 0.3s ease;
+      transition: 0.3s ease;
     }
 
     .menu-item.open .submenu {
@@ -111,12 +111,14 @@
     }
 
     .submenu a {
+      font-weight: 300;
       display: block;
-      font-size: 18px;
+      font-size: 21px;
       font-family: 'Times New Roman', serif;
       color: #000;
       text-decoration: none;
       margin: 6px 0;
+      padding-left: 10px;
     }
 
     .submenu a:hover {
@@ -285,8 +287,12 @@
       <a href="jamesbondseries.html">Casino Royale</a>
     </div>
   </div>
-
+<div class="menu-item">
   <a href="about.html">About</a>
+  </div>
+  <div class="menu-item">
+  <a href="index.html" class="home-link">Home</a>
+</div>
 </nav>
 
 <!-- HERO POST -->
