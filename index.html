@@ -89,37 +89,39 @@
     }
 
     .parent-item {
-      padding-left: 30px;
-      font-size: 22px;
-      font-family: 'Times New Roman', serif;
-      font-weight: 400;
-      cursor: pointer;
-    }
+  font-family: 'Times New Roman', serif;
+  font-weight: 400;
+  font-size: 22px;
+  cursor: pointer;
+  padding-left: 30px;
+  display: block;
+}
 
-    .submenu {
-      margin-top: 10px;
-      margin-left: 40px;
-      max-height: 200px;
-      overflow: hidden;
-      opacity: 0;
-      transition: 0.3s ease;
-    }
+    
+.submenu {
+  display: flex;
+  flex-direction: column;
+  margin-left: 40px;
+  max-height: 0;
+  overflow: hidden;
+  transition: 0.3s ease;
+  opacity: 0;
+}
 
-    .menu-item.open .submenu {
-      max-height: 300px;
-      opacity: 1;
-    }
+  .menu-item.open .submenu {
+  max-height: 200px;
+  opacity: 1;
+}
 
-    .submenu a {
-      font-weight: 300;
-      display: block;
-      font-size: 21px;
-      font-family: 'Times New Roman', serif;
-      color: #000;
-      text-decoration: none;
-      margin: 6px 0;
-      padding-left: 10px;
-    }
+ .submenu a {
+  font-family: 'Times New Roman', serif;
+  font-weight: 300;
+  font-size: 21px;
+  color: #000;
+  text-decoration: none;
+  margin: 5px 0;
+  padding-left: 10px;
+}
 
     .submenu a:hover {
       text-decoration: underline;
