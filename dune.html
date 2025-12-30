@@ -15,11 +15,11 @@
       margin: 0;
     }
 
-    /* Hamburger menu */
+    /* ================= MENU ICON ================= */
     .menu-icon {
       position: fixed;
       left: 20px;
-      top: 20px;
+      top: 25px;
       cursor: pointer;
       z-index: 1001;
       width: 28px;
@@ -28,22 +28,27 @@
       flex-direction: column;
       justify-content: space-between;
     }
+
     .menu-icon div {
       height: 4px;
       background-color: #0f172a;
       border-radius: 2px;
       transition: all 0.3s ease;
     }
+
     .menu-icon.open div:nth-child(1) {
       transform: rotate(45deg) translateY(9px);
     }
+
     .menu-icon.open div:nth-child(2) {
       opacity: 0;
     }
+
     .menu-icon.open div:nth-child(3) {
       transform: rotate(-45deg) translateY(-9px);
     }
 
+    /* ================= NAV ================= */
     nav {
       position: fixed;
       top: 0;
@@ -52,55 +57,72 @@
       height: 100%;
       background: #fff;
       border-right: 1px solid #ddd;
-      padding-top: 100px;
+      padding-top: 80px;
       transform: translateX(-100%);
       transition: transform 0.4s ease;
       z-index: 1000;
     }
+
     nav.open {
       transform: translateX(0);
     }
+
     .menu-item {
       margin: 20px 0;
     }
+
     .parent-item {
-      font-family: 'Times New Roman', serif;
-      font-weight: 400; /* same weight as Home */
-      font-size: 22px;
-      cursor: pointer;
-      padding-left: 30px;
-      display: block;
-    }
-    .submenu {
-      display: flex;
-      flex-direction: column;
-      margin-left: 40px;
-      max-height: 0;
-      overflow: hidden;
-      transition: 0.3s ease;
-      opacity: 0;
-    }
-    .menu-item.open .submenu {
-      max-height: 200px;
-      opacity: 1;
-    }
-    .submenu a {
-      font-family: 'Times New Roman', serif;
-      font-weight: 300;
-      font-size: 21px;
-      color: #000;
-      text-decoration: none;
-      margin: 5px 0;
-      padding-left: 10px;
-    }
+  font-family: 'Times New Roman', serif;
+  font-weight: 400;
+  font-size: 22px;
+  cursor: pointer;
+  padding-left: 30px;
+  display: block;
+}
+
+    
+.submenu {
+  display: flex;
+  flex-direction: column;
+  margin-left: 40px;
+  max-height: 0;
+  overflow: hidden;
+  transition: 0.3s ease;
+  opacity: 0;
+}
+
+  .menu-item.open .submenu {
+  max-height: 200px;
+  opacity: 1;
+}
+
+ .submenu a {
+  font-family: 'Times New Roman', serif;
+  font-weight: 300;
+  font-size: 21px;
+  color: #000;
+  text-decoration: none;
+  margin: 5px 0;
+  padding-left: 10px;
+}
+
     .submenu a:hover {
       text-decoration: underline;
     }
-    .menu-item a.home-link {
-      padding-left: 30px;
-      text-decoration: none; /* removed underline */
-      font-weight: 400;
-    }
+
+   .single-link {
+  display: block;
+  padding-left: 30px;
+  font-family: 'Times New Roman', serif;
+  font-size: 22px;
+  font-weight: 400;
+  text-decoration: none;
+  color: #000;
+}
+
+.single-link:hover {
+  text-decoration: underline;
+}
 
     .site-header {
       text-align: center;
@@ -216,9 +238,7 @@
     <div></div><div></div><div></div>
   </div>
 
-  <nav id="navMenu">
-
-  <!-- SCIFI -->
+ <nav id="navMenu">
   <div class="menu-item">
     <span class="parent-item">SciFi</span>
     <div class="submenu">
@@ -227,21 +247,19 @@
     </div>
   </div>
 
-  <!-- JAMES BOND SERIES — NEW SECTION -->
   <div class="menu-item">
     <span class="parent-item">James Bond Series</span>
     <div class="submenu">
       <a href="jamesbondseries.html">Casino Royale</a>
     </div>
   </div>
-
-  <!-- HOME -->
-  <div class="menu-item">
-    <a href="index.html" class="home-link">Home</a>
+<div class="menu-item">
+  <a href="about.html" class="single-link">About</a>
   </div>
-
+  <div class="menu-item">
+    <a href="index.html" class="single-link">Home</a>
+</div>
 </nav>
-
 
   <div class="site-header" id="siteHeader">
     <hr>
