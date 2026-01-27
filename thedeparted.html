@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Reboot — Insider Threats</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Filosofia&display=swap" rel="stylesheet">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2391931740891889"
+     crossorigin="anonymous"></script>
+  <!-- styles unchanged -->
+</head>
+
+<body>
+
+<div class="menu-icon" id="menuToggle">
+  <div></div><div></div><div></div>
+</div>
+
+<nav id="navMenu">
+  <div class="menu-item">
+    <span class="parent-item">SciFi</span>
+    <div class="submenu">
+      <a href="dune.html">DUNE</a>
+      <a href="terminator.html">Terminator</a>
+    </div>
+  </div>
+
+  <div class="menu-item">
+    <span class="parent-item">James Bond Series</span>
+    <div class="submenu">
+      <a href="jamesbondseries.html">Casino Royale</a>
+    </div>
+  </div>
+
+  <div class="menu-item">
+  <span class="parent-item">Crime</span>
+  <div class="submenu">
+    <a href="thedeparted.html">The Departed</a>
+    </div>
+  </div>
+
+  <div class="menu-item">
+    <a href="about.html" class="single-link">About</a>
+  </div>
+
+  <div class="menu-item">
+    <a href="index.html" class="single-link">Home</a>
+  </div>
+</div>
+</nav>
+
+<div class="site-header" id="siteHeader">
+  <hr>
+  <h1>The Reboot</h1>
+  <hr>
+</div>
+
+<div class="post-content">
+
+  <!-- NEW HEADLINE -->
+  <h1>Could the greatest security risk to companies be their own employees?</h1>
+
+  <div class="author-date">
+    <p>BY Peter Yeseab</p>
+    <p>January 27, 2026</p>
+  </div>
+
+  <!-- NEW IMAGE -->
+  <img src="images/thedeparted.jpg" alt="The Departed">
+  <div class="caption">Sometimes the biggest threat doesn’t come from outside</div>
+
+  <!-- NEW BODY TEXT -->
+  <p>
+    Could the greatest security risk to companies be their own employees? This question was brought into sharp focus by a 2016 study published by IBM on insider cybersecurity threats, which revealed that 60% of security incidents involved insiders. Contrary to what one might expect, companies are often most vulnerable from within.
+  </p>
+
+  <p>
+    Data breaches initiated by malicious insiders were also the most costly, averaging USD 4.99 million per incident. Furthermore, a report by Verizon found that while external threats typically compromise around 200 million records, incidents involving insider threat actors have resulted in the exposure of one billion records or more.
+  </p>
+
+  <!-- QUOTE -->
+  <blockquote>
+    “I’m the guy who does his job. You must be the other guy.”
+    <span class="quote-source">Dignam — Mark Wahlberg</span>
+  </blockquote>
+
+  <p>
+    Herman Hollerith devised a system of punched cards to store information so effectively that the Hollerith machine was adopted for use in the 1890 U.S. Census. Since then, cybersecurity has become vital to the way people store and use data today.
+  </p>
+
+  <p>
+    While external attacks—such as the NotPetya malware incident, which impacted organizations on a global scale—are widely discussed, far less attention is paid to the quieter (and often more awkward) reality: sometimes the biggest threat is already inside the building.
+  </p>
+
+  <!-- CREDITS -->
+  <h2 class="credits-title">CREDITS</h2>
+  <ol>
+    <li>IBM (2021). <em>Insider threats</em>. Available at: https://www.ibm.com/think/topics/insider-threats.</li>
+    <li>The Council of Insurance Agents & Brokers. <em>IBM: 60 Percent of Attacks Carried Out by Insiders</em>. Available at: https://www.ciab.com/resources/ibm-60-percent-attacks-carried-insiders/.</li>
+    <li>Morgan, S. (2016). <em>Top 2016 Cybersecurity Reports</em>. Forbes. Available at: https://www.forbes.com/sites/stevemorgan/2016/05/09/top-2016-cybersecurity-reports-out-from-att-cisco-dell-google-ibm-mcafee-symantec-and-verizon/.</li>
+  </ol>
+
+</div>
+
+<script>
+  const menuToggle = document.getElementById('menuToggle');
+  const navMenu = document.getElementById('navMenu');
+  const parentItems = document.querySelectorAll('.parent-item');
+
+  menuToggle.addEventListener('click', () => {
+    menuToggle.classList.toggle('open');
+    navMenu.classList.toggle('open');
+  });
+
+  parentItems.forEach(item => {
+    item.addEventListener('click', () => {
+      item.parentElement.classList.toggle('open');
+    });
+  });
+
+  window.addEventListener('scroll', () => {
+    const scrollPos = window.scrollY;
+    const siteHeader = document.getElementById('siteHeader');
+    siteHeader.style.opacity = scrollPos < 150 ? 1 - scrollPos / 150 : 0;
+  });
+</script>
+
+</body>
+</html>
