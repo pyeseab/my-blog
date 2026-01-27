@@ -259,6 +259,36 @@
       color: #ccc;
     }
 
+    /* ================= SIDE-BY-SIDE FEATURE ================= */
+.featured.side-by-side {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.featured.side-by-side img {
+  width: 50%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.featured.side-by-side .side-text {
+  width: 50%;
+  color: #0f172a;
+}
+
+.featured.side-by-side h2 {
+  font-size: 22px;
+  font-weight: 700;
+  margin: 0 0 10px 0;
+}
+
+.featured.side-by-side .byline {
+  color: #555;
+  font-size: 14px;
+}
+
+
     footer {
       margin-top: 80px;
       padding: 20px;
@@ -348,6 +378,17 @@
       </div>
     </a>
   </div>
+</section>
+
+<section>
+<div class="featured half-width side-by-side">
+  <a href="thedeparted.html" style="display:flex; gap:20px; text-decoration:none;">
+    <img src="images/thedeparted.jpg" alt="The Departed">
+
+    <div class="side-text">
+      <h2>Could the greatest security risk to companies be their own employees?</h2>
+    </div>
+  </a>
 </section>
 
 <footer>
