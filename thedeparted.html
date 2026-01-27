@@ -3,12 +3,195 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>The Reboot — Insider Threats</title>
+  <title>The Reboot — Crime: The Departed</title>
+
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Filosofia&display=swap" rel="stylesheet">
+
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2391931740891889"
      crossorigin="anonymous"></script>
-  <!-- styles unchanged -->
+
+  <style>
+    body {
+      font-family: 'Times New Roman', serif;
+      font-size: 19px;
+      line-height: 1.8;
+      color: #000;
+      margin: 0;
+    }
+
+    .menu-icon {
+      position: fixed;
+      left: 20px;
+      top: 25px;
+      cursor: pointer;
+      z-index: 1001;
+      width: 28px;
+      height: 22px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .menu-icon div {
+      height: 4px;
+      background-color: #0f172a;
+      border-radius: 2px;
+      transition: all 0.3s ease;
+    }
+
+    .menu-icon.open div:nth-child(1) {
+      transform: rotate(45deg) translateY(9px);
+    }
+
+    .menu-icon.open div:nth-child(2) {
+      opacity: 0;
+    }
+
+    .menu-icon.open div:nth-child(3) {
+      transform: rotate(-45deg) translateY(-9px);
+    }
+
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 260px;
+      height: 100%;
+      background: #fff;
+      border-right: 1px solid #ddd;
+      padding-top: 80px;
+      transform: translateX(-100%);
+      transition: transform 0.4s ease;
+      z-index: 1000;
+    }
+
+    nav.open {
+      transform: translateX(0);
+    }
+
+    .menu-item {
+      margin: 20px 0;
+    }
+
+    .parent-item {
+      font-size: 22px;
+      cursor: pointer;
+      padding-left: 30px;
+      display: block;
+    }
+
+    .submenu {
+      display: flex;
+      flex-direction: column;
+      margin-left: 40px;
+      max-height: 0;
+      overflow: hidden;
+      transition: 0.3s ease;
+      opacity: 0;
+    }
+
+    .menu-item.open .submenu {
+      max-height: 200px;
+      opacity: 1;
+    }
+
+    .submenu a {
+      font-size: 21px;
+      color: #000;
+      text-decoration: none;
+      margin: 5px 0;
+      padding-left: 10px;
+    }
+
+    .submenu a:hover,
+    .single-link:hover {
+      text-decoration: underline;
+    }
+
+    .single-link {
+      display: block;
+      padding-left: 30px;
+      font-size: 22px;
+      text-decoration: none;
+      color: #000;
+    }
+
+    .site-header {
+      text-align: center;
+      transition: opacity 0.4s;
+      z-index: 999;
+    }
+
+    .site-header h1 {
+      font-family: 'Playfair Display', serif;
+      font-weight: 900;
+      font-size: 27px;
+      margin: 10px 0;
+    }
+
+    .site-header hr {
+      border-top: 1px solid #0f172a;
+      width: 80%;
+      margin: 0 auto;
+    }
+
+    .post-content {
+      max-width: 900px;
+      margin: 100px auto 40px;
+      padding: 0 20px;
+    }
+
+    .post-content h1 {
+      font-family: Bodoni, serif;
+      font-size: 39px;
+      font-weight: 900;
+    }
+
+    .author-date {
+      font-size: 16px;
+      color: #555;
+      margin-bottom: 25px;
+    }
+
+    .post-content p {
+      margin-bottom: 21px;
+    }
+
+    blockquote {
+      font-family: 'Filosofia', serif;
+      font-size: 48px;
+      font-weight: bold;
+      margin: 60px 0;
+      text-align: center;
+      line-height: 1;
+    }
+
+    blockquote .quote-source {
+      font-size: 22px;
+      margin-top: 10px;
+      display: block;
+      color: #555;
+    }
+
+    h2.credits-title {
+      font-size: 28px;
+      text-align: center;
+      margin: 90px 0 30px;
+    }
+
+    img {
+      max-width: 100%;
+      margin: 20px 0;
+    }
+
+    .caption {
+      font-size: 14px;
+      text-align: center;
+      color: #555;
+      margin-bottom: 20px;
+    }
+  </style>
 </head>
 
 <body>
@@ -27,16 +210,9 @@
   </div>
 
   <div class="menu-item">
-    <span class="parent-item">James Bond Series</span>
+    <span class="parent-item">Crime</span>
     <div class="submenu">
-      <a href="jamesbondseries.html">Casino Royale</a>
-    </div>
-  </div>
-
-  <div class="menu-item">
-  <span class="parent-item">Crime</span>
-  <div class="submenu">
-    <a href="thedeparted.html">The Departed</a>
+      <a href="thedeparted.html">The Departed</a>
     </div>
   </div>
 
@@ -47,7 +223,6 @@
   <div class="menu-item">
     <a href="index.html" class="single-link">Home</a>
   </div>
-</div>
 </nav>
 
 <div class="site-header" id="siteHeader">
@@ -57,8 +232,6 @@
 </div>
 
 <div class="post-content">
-
-  <!-- NEW HEADLINE -->
   <h1>Could the greatest security risk to companies be their own employees?</h1>
 
   <div class="author-date">
@@ -66,63 +239,51 @@
     <p>January 27, 2026</p>
   </div>
 
-  <!-- NEW IMAGE -->
-  <img src="images/thedeparted.jpg" alt="The Departed">
+  <img src="images/thedeparted.png" alt="The Departed">
   <div class="caption">Sometimes the biggest threat doesn’t come from outside</div>
 
-  <!-- NEW BODY TEXT -->
   <p>
-    Could the greatest security risk to companies be their own employees? This question was brought into sharp focus by a 2016 study published by IBM on insider cybersecurity threats, which revealed that 60% of security incidents involved insiders. Contrary to what one might expect, companies are often most vulnerable from within.
+    A 2016 IBM study revealed that 60% of cybersecurity incidents involved insiders. Contrary to popular belief, companies are often most vulnerable from within.
   </p>
 
   <p>
-    Data breaches initiated by malicious insiders were also the most costly, averaging USD 4.99 million per incident. Furthermore, a report by Verizon found that while external threats typically compromise around 200 million records, incidents involving insider threat actors have resulted in the exposure of one billion records or more.
+    Insider-driven breaches are also the most expensive, averaging USD 4.99 million. Verizon reports show that while external attacks compromise millions of records, insider incidents can expose over a billion.
   </p>
 
-  <!-- QUOTE -->
   <blockquote>
     “I’m the guy who does his job. You must be the other guy.”
     <span class="quote-source">Dignam — Mark Wahlberg</span>
   </blockquote>
 
   <p>
-    Herman Hollerith devised a system of punched cards to store information so effectively that the Hollerith machine was adopted for use in the 1890 U.S. Census. Since then, cybersecurity has become vital to the way people store and use data today.
+    From Hollerith’s punched cards to modern digital systems, data security has always mattered. External attacks dominate headlines, but the real danger is often already inside the building.
   </p>
 
-  <p>
-    While external attacks—such as the NotPetya malware incident, which impacted organizations on a global scale—are widely discussed, far less attention is paid to the quieter (and often more awkward) reality: sometimes the biggest threat is already inside the building.
-  </p>
-
-  <!-- CREDITS -->
   <h2 class="credits-title">CREDITS</h2>
   <ol>
-    <li>IBM (2021). <em>Insider threats</em>. Available at: https://www.ibm.com/think/topics/insider-threats.</li>
-    <li>The Council of Insurance Agents & Brokers. <em>IBM: 60 Percent of Attacks Carried Out by Insiders</em>. Available at: https://www.ciab.com/resources/ibm-60-percent-attacks-carried-insiders/.</li>
-    <li>Morgan, S. (2016). <em>Top 2016 Cybersecurity Reports</em>. Forbes. Available at: https://www.forbes.com/sites/stevemorgan/2016/05/09/top-2016-cybersecurity-reports-out-from-att-cisco-dell-google-ibm-mcafee-symantec-and-verizon/.</li>
+    <li>IBM (2021). Insider threats.</li>
+    <li>Verizon Data Breach Investigations Report.</li>
   </ol>
-
 </div>
 
 <script>
   const menuToggle = document.getElementById('menuToggle');
   const navMenu = document.getElementById('navMenu');
-  const parentItems = document.querySelectorAll('.parent-item');
 
   menuToggle.addEventListener('click', () => {
     menuToggle.classList.toggle('open');
     navMenu.classList.toggle('open');
   });
 
-  parentItems.forEach(item => {
+  document.querySelectorAll('.parent-item').forEach(item => {
     item.addEventListener('click', () => {
       item.parentElement.classList.toggle('open');
     });
   });
 
   window.addEventListener('scroll', () => {
-    const scrollPos = window.scrollY;
-    const siteHeader = document.getElementById('siteHeader');
-    siteHeader.style.opacity = scrollPos < 150 ? 1 - scrollPos / 150 : 0;
+    const header = document.getElementById('siteHeader');
+    header.style.opacity = window.scrollY < 150 ? 1 - window.scrollY / 150 : 0;
   });
 </script>
 
