@@ -262,18 +262,17 @@
     /* ================= SIDE-BY-SIDE FEATURE ================= */
 .featured.side-by-side {
   display: flex;
-  gap: 20px;               /* space between image and text */
+  gap: 20px;               
   align-items: flex-start;
   width: 90%;
   max-width: 900px;
-  margin: 10px auto 20px auto; /* smaller bottom margin */
+  margin: 10px 0 20px 0;  /* remove auto centering, align left */
 }
 
 .featured.side-by-side img {
   width: 50%;
-  height: auto;            /* preserve full image height */
-  max-height: 320px;       /* optional: limit height if needed */
-  object-fit: contain;     /* show full image without cropping */
+  height: auto;            
+  object-fit: contain;     
   display: block;
 }
 
