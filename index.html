@@ -262,24 +262,18 @@
     /* ================= SIDE-BY-SIDE FEATURE ================= */
 .featured.side-by-side {
   display: flex;
-  gap: 20px;              /* gap between image and text */
-  align-items: flex-start; /* top-align text with image */
+  gap: 20px;               /* space between image and text */
+  align-items: flex-start;
   width: 90%;
   max-width: 900px;
-}
-
-.features {
-  margin: 0 auto 20px auto; /* shrink bottom gap */
-}
-
-.featured.side-by-side {
-  margin: 10px auto 40px auto; /* smaller top gap */
+  margin: 10px auto 20px auto; /* smaller bottom margin */
 }
 
 .featured.side-by-side img {
   width: 50%;
-  height: 320px;           /* same height as other feature images */
-  object-fit: cover;
+  height: auto;            /* preserve full image height */
+  max-height: 320px;       /* optional: limit height if needed */
+  object-fit: contain;     /* show full image without cropping */
   display: block;
 }
 
@@ -288,8 +282,9 @@
   color: #0f172a;
   display: flex;
   flex-direction: column;
-  justify-content: center;  /* vertically center text relative to image */
+  justify-content: center;
 }
+
 
 .featured.side-by-side h2 a {
   font-size: 42px;       /* very large, almost as tall as image */
