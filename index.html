@@ -264,14 +264,15 @@
   display: flex;
   gap: 20px;              
   align-items: flex-start; 
-  width: 100%;            /* full width of parent .features container */
-  margin: 20px 0 40px 0;  /* small vertical gap above/below */
+  width: 90%;            
+  max-width: 900px;
+  margin: 20px auto 40px auto;  /* vertical spacing above and below */
 }
 
 .featured.side-by-side img {
   width: 50%;
   height: 320px;          
-  object-fit: cover;      /* keeps image from cropping weirdly */
+  object-fit: cover;     
 }
 
 .featured.side-by-side .side-text {
@@ -286,13 +287,12 @@
   font-size: 36px;
   font-weight: 900;
   color: #0f172a; 
-  text-decoration: none;   /* no underline by default */
+  text-decoration: none;
 }
 
 .featured.side-by-side h2 a:hover {
   text-decoration: underline;
 }
-
 
     footer {
       margin-top: 80px;
@@ -383,15 +383,16 @@
       </div>
     </a>
   </div>
-
-   <!-- Departed Post -->
-  <div class="featured side-by-side">
-      <img src="images/thedeparted.jpg" alt="The Departed">
-      <div class="side-text">
-        <h2><a href="thedeparted.html">Could the greatest security risk to companies be their own employees?</a></h2>
-      </div>
-  </div>
 </section>
+
+<!-- DEPARTED POST: BELOW THE ABOVE FEATURES -->
+<div class="featured side-by-side">
+  <img src="images/thedeparted.jpg" alt="The Departed">
+  <div class="side-text">
+    <h2><a href="thedeparted.html">Could the greatest security risk to companies be their own employees?</a></h2>
+  </div>
+</div>
+
 
 <footer>
   © 2025 The Reboot — All rights reserved.
