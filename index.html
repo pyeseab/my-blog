@@ -266,7 +266,14 @@
   align-items: flex-start; /* top-align text with image */
   width: 90%;
   max-width: 900px;
-  margin: 10px auto 60px auto; /* small gap above and below post */
+}
+
+.features {
+  margin: 0 auto 20px auto; /* shrink bottom gap */
+}
+
+.featured.side-by-side {
+  margin: 10px auto 40px auto; /* smaller top gap */
 }
 
 .featured.side-by-side img {
@@ -285,16 +292,17 @@
 }
 
 .featured.side-by-side h2 a {
-  font-size: 36px;
+  font-size: 42px;       /* very large, almost as tall as image */
   font-weight: 900;
-  color: #0f172a; 
-  margin: 0 0 10px 0;
+  color: #0f172a;        /* text color */
+  text-decoration: none; /* remove underline by default */
+  line-height: 1.1;
+  transition: text-decoration 0.2s ease;
 }
 
 .featured.side-by-side h2 a:hover {
-  text-decoration: underline;
+  text-decoration: underline; /* underline only on hover */
 }
-
 
 
     footer {
