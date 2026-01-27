@@ -262,19 +262,26 @@
     /* ================= SIDE-BY-SIDE FEATURE ================= */
 .featured.side-by-side {
   display: flex;
-  gap: 20px;
-  align-items: center;
+  gap: 20px;              /* gap between image and text */
+  align-items: flex-start; /* top-align text with image */
+  width: 90%;
+  max-width: 900px;
+  margin: 20px auto 60px auto; /* small gap above and below post */
 }
 
 .featured.side-by-side img {
   width: 50%;
-  height: 200px;
+  height: 320px;           /* same height as other feature images */
   object-fit: cover;
+  display: block;
 }
 
 .featured.side-by-side .side-text {
   width: 50%;
   color: #0f172a;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;  /* vertically center text relative to image */
 }
 
 .featured.side-by-side h2 {
@@ -381,14 +388,11 @@
 </section>
 
 <section>
-<div class="featured half-width side-by-side">
-  <a href="thedeparted.html" style="display:flex; gap:20px; text-decoration:none;">
+<div class="featured side-by-side">
     <img src="images/thedeparted.jpg" alt="The Departed">
-
     <div class="side-text">
       <h2>Could the greatest security risk to companies be their own employees?</h2>
     </div>
-  </a>
 </section>
 
 <footer>
