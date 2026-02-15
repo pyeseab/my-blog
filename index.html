@@ -144,12 +144,12 @@
 
     /* ================= HERO POST ================= */
     .featured {
-      position: relative;
-      width: 90%;
-      max-width: 900px;
-      margin: 60px auto;
-      overflow: hidden;
-    }
+  position: relative;
+  width: 90%;
+  max-width: 900px;
+  margin: 40px auto;   /* was 60px */
+  overflow: hidden;
+}
 
     .featured img {
       width: 100%;
@@ -218,21 +218,21 @@
 
     /* ================= FEATURES ================= */
     .features-title {
-      width: 90%;
-      max-width: 900px;
-      margin: 60px auto 10px auto;
-      font-size: 32px;
-      font-weight: 700;
-    }
+  width: 90%;
+  max-width: 900px;
+  margin: 50px auto 20px auto;
+  font-size: 28px;
+  font-weight: 700;
+}
 
-    .features {
-      width: 90%;
-      max-width: 900px;
-      margin: 0 auto 0px auto;
-      display: flex;
-      gap: 10px;
-      align-items: flex-start;
-    }
+ .features {
+  width: 90%;
+  max-width: 900px;
+  margin: 0 auto 30px auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
 
     .featured.half-width {
       width: calc(50% - 10px);
@@ -241,7 +241,7 @@
 
     /* SAME SIZE FEATURE IMAGES */
     .featured.half-width img {
-      height: 320px;
+      height: 300px;
       object-fit: cover;
     }
 
@@ -291,6 +291,48 @@
 }
 
 .featured.side-by-side h2 a:hover {
+  text-decoration: underline;
+}
+
+.section-divider {
+  width: 90%;
+  max-width: 900px;
+  margin: 40px auto;
+  border: none;
+  border-top: 1px solid #000;
+}
+
+.lifestyle-title {
+  text-align: right;
+}
+
+.lifestyle-section {
+  width: 90%;
+  max-width: 900px;
+  margin: 20px auto 60px auto;
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.lifestyle-section img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+}
+
+.lifestyle-section h2 {
+  font-size: 30px;
+  line-height: 1.2;
+}
+
+.lifestyle-section a {
+  text-decoration: none;
+  color: #000;
+}
+
+.lifestyle-section a:hover {
   text-decoration: underline;
 }
 
@@ -399,19 +441,21 @@
   </div>
 </div>
 
+<hr class="section-divider">
+
 <!-- LIFESTYLE POST -->
 <h2 class="features-title">Lifestyle</h2>
 
 <section class="features">
-  <div class="featured half-width">
+ <h2 class="features-title lifestyle-title">Lifestyle</h2>
+
+<section class="lifestyle-section">
+  <img src="images/butterkist.jpg" alt="Butterkist Toffee">
+  <h2>
     <a href="Butterkist.html">
-      <img src="images/butterkist.jpg" alt="Butterkist Toffee">
-      <div class="overlay"></div>
-      <div class="text-overlay">
-        <h2>Butterkist: 100 years at the heart of the Movie theatres</h2>
-      </div>
+      Butterkist: 100 years at the heart of the Movie theatres
     </a>
-  </div>
+  </h2>
 </section>
 
 
