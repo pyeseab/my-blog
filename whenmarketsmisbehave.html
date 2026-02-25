@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Reboot — Crime: The Departed</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Filosofia&display=swap" rel="stylesheet">
+
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2391931740891889"
+     crossorigin="anonymous"></script>
+
+  <style>
+    body {
+      font-family: 'Times New Roman', serif;
+      font-size: 19px;
+      line-height: 1.8;
+      color: #000;
+      margin: 0;
+    }
+
+    .menu-icon {
+      position: fixed;
+      left: 20px;
+      top: 25px;
+      cursor: pointer;
+      z-index: 1001;
+      width: 28px;
+      height: 22px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .menu-icon div {
+      height: 4px;
+      background-color: #0f172a;
+      border-radius: 2px;
+      transition: all 0.3s ease;
+    }
+
+    .menu-icon.open div:nth-child(1) {
+      transform: rotate(45deg) translateY(9px);
+    }
+
+    .menu-icon.open div:nth-child(2) {
+      opacity: 0;
+    }
+
+    .menu-icon.open div:nth-child(3) {
+      transform: rotate(-45deg) translateY(-9px);
+    }
+
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 260px;
+      height: 100%;
+      background: #fff;
+      border-right: 1px solid #ddd;
+      padding-top: 80px;
+      transform: translateX(-100%);
+      transition: transform 0.4s ease;
+      z-index: 1000;
+    }
+
+    nav.open {
+      transform: translateX(0);
+    }
+
+    .menu-item {
+      margin: 20px 0;
+    }
+
+    .parent-item {
+      font-size: 22px;
+      cursor: pointer;
+      padding-left: 30px;
+      display: block;
+    }
+
+    .submenu {
+      display: flex;
+      flex-direction: column;
+      margin-left: 40px;
+      max-height: 0;
+      overflow: hidden;
+      transition: 0.3s ease;
+      opacity: 0;
+    }
+
+    .menu-item.open .submenu {
+      max-height: 200px;
+      opacity: 1;
+    }
+
+    .submenu a {
+      font-size: 21px;
+      color: #000;
+      text-decoration: none;
+      margin: 5px 0;
+      padding-left: 10px;
+    }
+
+    .submenu a:hover,
+    .single-link:hover {
+      text-decoration: underline;
+    }
+
+    .single-link {
+      display: block;
+      padding-left: 30px;
+      font-size: 22px;
+      text-decoration: none;
+      color: #000;
+    }
+
+    .site-header {
+      text-align: center;
+      transition: opacity 0.4s;
+      z-index: 999;
+    }
+
+    .site-header h1 {
+      font-family: 'Playfair Display', serif;
+      font-weight: 900;
+      font-size: 27px;
+      margin: 10px 0;
+    }
+
+    .site-header hr {
+      border-top: 1px solid #0f172a;
+      width: 80%;
+      margin: 0 auto;
+    }
+
+    .post-content {
+      max-width: 900px;
+      margin: 100px auto 40px;
+      padding: 0 20px;
+    }
+
+    .post-content h1 {
+      font-family: Bodoni, serif;
+      font-size: 39px;
+      font-weight: 900;
+    }
+
+    .author-date {
+      font-size: 16px;
+      color: #555;
+      margin-bottom: 0px;
+    }
+
+    .post-content p {
+      margin-bottom: 21px;
+    }
+
+  .post-content img {
+  display: block;       /* makes margin auto work */
+  margin: 20px auto;    /* centers horizontally */
+  max-width: 100%;      /* don’t exceed container width */
+  height: auto;         /* keeps aspect ratio */
+}
+
+
+    h2.credits-title {
+      font-size: 28px;
+      text-align: center;
+      margin: 90px 0 30px;
+    }
+
+    img {
+      max-width: 100%;
+      height: 100%;
+      margin: 20px 0;
+    }
+
+    .caption {
+      font-size: 14px;
+      text-align: center;
+      color: #555;
+      margin-bottom: 20px;
+    }
+    .container img {
+  display: block;
+  margin: 0 auto; /* centers horizontally */
+}
+.container {
+  display: flex;
+  justify-content: center; /* horizontal center */
+  align-items: center;     /* vertical center */
+  height: 300px;           /* or whatever height your container has */
+}
+
+.container img {
+  max-width: 100%;
+  height: auto;
+}
+.section {
+  display: flex;
+  gap: 20px;              /* space between columns */
+  align-items: center;     /* vertical alignment of both columns */
+}
+
+.section .column {
+  flex: 1;                 /* columns share space equally */
+}
+
+/* For images to fill their column neatly */
+.section .column img {
+  width: 100%;             /* fills the column width */
+  height: auto;            /* keeps aspect ratio */
+  object-fit: cover;       /* crops if needed */
+}
+
+
+
+  </style>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2391931740891889"
+     crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+<div class="menu-icon" id="menuToggle">
+  <div></div><div></div><div></div>
+</div>
+
+<nav id="navMenu">
+  <div class="menu-item">
+    <span class="parent-item">SciFi</span>
+    <div class="submenu">
+      <a href="dune.html">DUNE</a>
+      <a href="terminator.html">Terminator</a>
+    </div>
+  </div>
+
+  <div class="menu-item">
+    <span class="parent-item">James Bond Series</span>
+    <div class="submenu">
+      <a href="jamesbondseries.html">Casino Royale</a>
+    </div>
+  </div>
+
+   <div class="menu-item">
+  <span class="parent-item">Crime</span>
+  <div class="submenu">
+    <a href="thedeparted.html">The Departed</a>
+    </div>
+  </div>
+
+<div class="menu-item">
+  <a href="lifestyle/lifestyle.html" class="single-link">Lifestyle</a>
+</div>
+
+<div class="menu-item">
+  <a href="about.html" class="single-link">About</a>
+  </div>
+  <div class="menu-item">
+    <a href="index.html" class="single-link">Home</a>
+</div>
+</nav>
+
+<div class="site-header" id="siteHeader">
+  <hr>
+  <h1>The Reboot</h1>
+  <hr>
+</div>
+
+<div class="post-content">
+  <h1>When Markets Misbehave: Are my cinema tickets overpriced?</h1>
+
+  <div class="author-date">
+    <p>BY Peter Yeseab</p>
+    <p>Feburary 25, 2026</p>
+  </div>
+
+  <img src="images/whenmarketsmisbehavearemycineaticketsoverpriced.png" alt="Mad money">
+
+  <div class="caption">Mad Money</div>
+
+  <p>
+    A trip to my favourite Vue cinema in Fulham Broadway and I discovered a cinema ticket now cost £11.60. I reluctantly picked my seat to watch the latest Marty Supreme movie; I found myself staring at the steward in front of me questioning who in the world increased the ticket price? Two hours of feeling deflated passed before my mood lifted when I read about a 23-million-dollar book on Amazon about flies by Peter A. Lawrence. In the end the book’s price was dictated by algorithmic pricing. It turns out that two sellers were using algorithms to set their prices based on a fixed fraction of each other’s prices. One seller set their price at 0.99830 times the competitors, while the other priced theirs at 1.27059 times the first. Apparently, neither seller thought to stop the pricing, and before long, the system ran wild resulting in a final price of 23,698,655.93 USD plus 3.99 USD shipping.
+  </p>
+
+  <p>
+    On May 5, 2010, amid the flash stock market crash, CNBC’s <em>Mad Money</em> host Jim Cramer went live, urging viewers not to panic and to buy Procter & Gamble. Markets had declined through-out the day briefly erasing nearly $1 trillion in market value before rebounding. According to investigations by the U.S. Securities and Exchange Commission and the Commodity Futures Trading Commission the crash was caused by a chain reaction involving algorithmic trading and market structure. It was one of the most dramatic intraday swings in market history. In the UK it was general election day, whilst in the US Wall Street was gripped by fears about the Greek debt crisis. No one had expected the near 1,000-point dive in share prices.
+  </p>
+
+  <p>
+   So perhaps I should consider myself fortunate. My overpriced cinema ticket did not require a televised rescue by a media anchor armed with dramatic sound effects and a congressional hearing. Still — £11.60 feels ambitious.
+  </p>
+
+  <img src="images/whenmarketsmisbehave.png" alt="when markets misbehave">
+  
+  <div class="caption">when markets misbehave</div>
+
+  <h2 class="credits-title">CREDITS</h2>
+  <ol>
+    <li>Book on Amazon tops $23.6 million - UPI.com. [online] UPI. 2011. Available at: https://www.upi.com/Odd_News/2011/04/26/Book-on-Amazon-tops-236-million/94271303840708/?utm_source=chatgpt.com.</li>
+    <li>Reddit.com. Reddit - The heart of the internet. [online] (2024). Available at: https://www.reddit.com/r/investing/comments/e910r8/2010_flash_crash/?utm_source=chatgpt.com.</li>
+  </ol>
+</div>
+
+
+<script>
+  const menuToggle = document.getElementById('menuToggle');
+  const navMenu = document.getElementById('navMenu');
+
+  menuToggle.addEventListener('click', () => {
+    menuToggle.classList.toggle('open');
+    navMenu.classList.toggle('open');
+  });
+
+  document.querySelectorAll('.parent-item').forEach(item => {
+    item.addEventListener('click', () => {
+      item.parentElement.classList.toggle('open');
+    });
+  });
+
+  window.addEventListener('scroll', () => {
+    const header = document.getElementById('siteHeader');
+    header.style.opacity = window.scrollY < 150 ? 1 - window.scrollY / 150 : 0;
+  });
+</script>
+
+</body>
+</html>
