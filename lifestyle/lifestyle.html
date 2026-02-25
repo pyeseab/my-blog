@@ -29,10 +29,11 @@
     }
 
     h1 {
-      font-size: clamp(32px, 6vw, 48px);
-      font-weight: 900;
+      font-size: clamp(20px, 4vw, 28px);
+      font-weight: 700;
       margin: 0;
       text-align: center;
+      letter-spacing: 0.02em;
     }
 
     /* ================= MENU ICON ================= */
@@ -50,7 +51,7 @@
     }
 
     .menu-icon div {
-      height: 4px;
+      height: 3px;
       background-color: #0f172a;
       border-radius: 2px;
       transition: all 0.3s ease;
@@ -143,50 +144,55 @@
       text-decoration: underline;
     }
 
+    /* ================= SECTION HEADING ================= */
+    .section-heading {
+      padding: 40px 60px 10px;
+      font-size: clamp(28px, 4vw, 40px);
+      font-weight: 700;
+      font-family: 'Playfair Display', serif;
+    }
+
     /* ================= LIFESTYLE POSTS GRID ================= */
     .lifestyle-posts {
       display: flex;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      padding: 40px 60px;
-      gap: 20px;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: flex-start;
+      padding: 30px 60px 40px;
+      gap: 40px;
     }
 
     .lifestyle-posts .lifestyle-hero {
-      flex: 1 1 45%;
+      flex: 0 1 45%;
       display: flex;
       flex-direction: column;
-      background: #f4f4f4;
+      background: transparent;
       overflow: hidden;
-      border-radius: 8px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-      transition: transform 0.2s ease;
-    }
-
-    .lifestyle-posts .lifestyle-hero:hover {
-      transform: translateY(-5px);
     }
 
     .lifestyle-posts .lifestyle-text {
-      padding: 20px;
+      padding: 16px 0 0;
     }
 
+    /* Hide the category label to match screenshot */
     .category {
-      font-size: 24px;
-      font-weight: 900;
-      margin-bottom: 10px;
-      text-decoration: underline;
+      display: none;
     }
 
     .lifestyle-posts .lifestyle-text h2 {
-      font-size: 28px;
-      margin-bottom: 15px;
-      line-height: 1.2;
+      font-size: clamp(18px, 2.2vw, 24px);
+      font-weight: 900;
+      margin: 0;
+      line-height: 1.3;
     }
 
-    .subtitle {
-      font-size: 16px;
-      color: #555;
+    .lifestyle-posts .lifestyle-text h2 a {
+      color: #0f172a;
+      text-decoration: none;
+    }
+
+    .lifestyle-posts .lifestyle-text h2 a:hover {
+      text-decoration: underline;
     }
 
     .lifestyle-posts .lifestyle-image img {
@@ -198,6 +204,10 @@
 
     /* ================= MOBILE ================= */
     @media (max-width: 900px) {
+      .section-heading {
+        padding: 30px 20px 10px;
+      }
+
       .lifestyle-posts {
         flex-direction: column;
         padding: 20px;
@@ -232,22 +242,22 @@
   <div class="menu-item">
     <span class="parent-item">SciFi</span>
     <div class="submenu">
-      <a href="dune.html">DUNE</a>
-      <a href="terminator.html">Terminator</a>
+      <a href="../dune.html">DUNE</a>
+      <a href="../terminator.html">Terminator</a>
     </div>
   </div>
 
   <div class="menu-item">
     <span class="parent-item">James Bond Series</span>
     <div class="submenu">
-      <a href="jamesbondseries.html">Casino Royale</a>
+      <a href="../jamesbondseries.html">Casino Royale</a>
     </div>
   </div>
 
   <div class="menu-item">
     <span class="parent-item">Crime</span>
     <div class="submenu">
-      <a href="thedeparted.html">The Departed</a>
+      <a href="../thedeparted.html">The Departed</a>
     </div>
   </div>
 
@@ -256,32 +266,36 @@
   </div>
 
   <div class="menu-item">
-    <a href="about.html" class="single-link">About</a>
+    <a href="../about.html" class="single-link">About</a>
   </div>
 
   <div class="menu-item">
-    <a href="index.html" class="single-link">Home</a>
+    <a href="../index.html" class="single-link">Home</a>
   </div>
 </nav>
+
+<!-- ================= SECTION HEADING ================= -->
+<h2 class="section-heading">Lifestyle</h2>
+
 <!-- ================= LIFESTYLE POSTS GRID ================= -->
 <section class="lifestyle-posts">
   <article class="lifestyle-hero">
     <div class="lifestyle-image">
-      <img src="images/Butterkist.jpg.png" alt="Butterkist Crunchy Toffee Popcorn">
+      <img src="../images/Butterkist.jpg.png" alt="Butterkist Crunchy Toffee Popcorn">
     </div>
     <div class="lifestyle-text">
       <div class="category">Lifestyle</div>
-      <h2><a href="Butterkist.html">Butterkist: 100 years at the heart of the Movie theatres</a></h2>
+      <h2><a href="../Butterkist.html">Butterkist: 100 years at the heart of the Movie theatres</a></h2>
     </div>
   </article>
 
   <article class="lifestyle-hero">
     <div class="lifestyle-image">
-      <img src="images/whenmarketsmisbehavearemycinematicketsoverpriced.jpg" alt="Mad Money Cinema Tickets">
+      <img src="../images/whenmarketsmisbehavearemycinematicketsoverpriced.jpg" alt="Mad Money Cinema Tickets">
     </div>
     <div class="lifestyle-text">
       <div class="category">Lifestyle</div>
-      <h2><a href="whenmarketsmisbehave.html">When Markets Misbehave: Are my cinema tickets overpriced?</a></h2>
+      <h2><a href="../whenmarketsmisbehave.html">When Markets Misbehave: Are my cinema tickets overpriced?</a></h2>
     </div>
   </article>
 </section>
