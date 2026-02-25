@@ -23,6 +23,9 @@
       align-items: center;
       justify-content: center;
       padding: 20px;
+      background: #fff;
+      border-bottom: 1px solid #ddd;
+      z-index: 1002;
     }
 
     h1 {
@@ -38,7 +41,7 @@
       left: 20px;
       top: 25px;
       cursor: pointer;
-      z-index: 1001;
+      z-index: 1003;
       width: 28px;
       height: 22px;
       display: flex;
@@ -77,7 +80,7 @@
       padding-top: 80px;
       transform: translateX(-100%);
       transition: transform 0.4s ease;
-      z-index: 1000;
+      z-index: 1001;
     }
 
     nav.open {
@@ -140,69 +143,68 @@
       text-decoration: underline;
     }
 
-    /* ================= LIFESTYLE HERO ================= */
-    .lifestyle-hero {
+    /* ================= LIFESTYLE POSTS GRID ================= */
+    .lifestyle-posts {
       display: flex;
-      min-height: 85vh;
-      margin-bottom: 40px;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      padding: 40px 60px;
+      gap: 20px;
     }
 
-    .lifestyle-text {
-      width: 45%;
-      padding: 80px 60px;
-      background: #f4f4f4;
+    .lifestyle-posts .lifestyle-hero {
+      flex: 1 1 45%;
       display: flex;
       flex-direction: column;
-      justify-content: center;
+      background: #f4f4f4;
+      overflow: hidden;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+      transition: transform 0.2s ease;
+    }
+
+    .lifestyle-posts .lifestyle-hero:hover {
+      transform: translateY(-5px);
+    }
+
+    .lifestyle-posts .lifestyle-text {
+      padding: 20px;
     }
 
     .category {
-      font-size: 28px;
+      font-size: 24px;
       font-weight: 900;
-      margin-bottom: 20px;
+      margin-bottom: 10px;
       text-decoration: underline;
     }
 
-    .lifestyle-text h2 {
-      font-size: 48px;
-      line-height: 1.1;
-      margin-bottom: 30px;
-      font-weight: 900;
+    .lifestyle-posts .lifestyle-text h2 {
+      font-size: 28px;
+      margin-bottom: 15px;
+      line-height: 1.2;
     }
 
     .subtitle {
-      font-size: 20px;
+      font-size: 16px;
       color: #555;
-      max-width: 500px;
     }
 
-    .lifestyle-image {
-      width: 55%;
-    }
-
-    .lifestyle-image img {
+    .lifestyle-posts .lifestyle-image img {
       width: 100%;
-      height: 100%;
+      height: auto;
       object-fit: cover;
+      display: block;
     }
 
     /* ================= MOBILE ================= */
     @media (max-width: 900px) {
-      .lifestyle-hero {
+      .lifestyle-posts {
         flex-direction: column;
+        padding: 20px;
       }
 
-      .lifestyle-text,
-      .lifestyle-image {
-        width: 100%;
-      }
-
-      .lifestyle-text {
-        padding: 40px 30px;
-      }
-
-      .lifestyle-text h2 {
-        font-size: 32px;
+      .lifestyle-posts .lifestyle-hero {
+        flex: 1 1 100%;
       }
     }
 
@@ -214,7 +216,6 @@
       color: #777;
       border-top: 1px solid #eee;
     }
-
   </style>
 </head>
 
@@ -263,34 +264,33 @@
   </div>
 </nav>
 
-<!-- ================= FIRST HERO POST ================= -->
+<!-- ================= LIFESTYLE POSTS GRID ================= -->
+<section class="lifestyle-posts">
+  <article class="lifestyle-hero">
+    <div class="lifestyle-text">
+      <div class="category">Lifestyle</div>
+      <h2>Butterkist: 100 years at the heart of the Movie theatres</h2>
+      <p class="subtitle">
+        Butterkist crunchy toffee popcorn — the iconic cinematic snack that has defined the British big-screen experience for over a century.
+      </p>
+    </div>
+    <div class="lifestyle-image">
+      <img src="images/Butterkist.jpg.png" alt="Butterkist crunchy toffee popcorn">
+    </div>
+  </article>
 
-<section class="lifestyle-hero">
-  <div class="lifestyle-text">
-    <div class="category">Lifestyle</div>
-    <h2>Butterkist: 100 years at the heart of the Movie theatres</h2>
-    <p class="subtitle">
-      Butterkist crunchy toffee popcorn — the iconic cinematic snack that has defined the British big-screen experience for over a century.
-    </p>
-  </div>
-  <div class="lifestyle-image">
-    <img src="images/Butterkist.jpg.png" alt="Butterkist crunchy toffee popcorn">
-  </div>
-</section>
-
-<!-- ================= SECOND HERO POST ================= -->
-
-<section class="lifestyle-hero">
-  <div class="lifestyle-text">
-    <div class="category">Lifestyle</div>
-    <h2>When Markets Misbehave: Are my cinema tickets overpriced?</h2>
-    <p class="subtitle">
-      Exploring how algorithms, studio deals, and market forces may be silently inflating the cost of your movie night — from popcorn to the ticket itself.
-    </p>
-  </div>
-  <div class="lifestyle-image">
-    <img src="images/whenmarketsmisbehavearemycinematicketsoverpriced.png" alt="When Markets Misbehave - Cinema Tickets">
-  </div>
+  <article class="lifestyle-hero">
+    <div class="lifestyle-text">
+      <div class="category">Lifestyle</div>
+      <h2>When Markets Misbehave: Are my cinema tickets overpriced?</h2>
+      <p class="subtitle">
+        Exploring how algorithms, studio deals, and market forces may be silently inflating the cost of your movie night — from popcorn to the ticket itself.
+      </p>
+    </div>
+    <div class="lifestyle-image">
+      <img src="images/whenmarketsmisbehavearemycinematicketsoverpriced.png" alt="When Markets Misbehave - Cinema Tickets">
+    </div>
+  </article>
 </section>
 
 <footer>
